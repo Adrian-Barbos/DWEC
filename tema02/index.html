@@ -81,7 +81,7 @@
     </tbody>
   </table>
 </div>
-    <div style="margin-left: 110px;">
+    <div style="margin-left: 150px;">
         <br>
             <h2><i class="bi bi-2-circle"> </i>Motores de los navegadores y su impacto en el desarrollo</h2>
             <p>La gran mayoría de los navegadores actuales comparten un motor de renderizado común, principalmente Blink que está basado en Chromium, debido a las ventajas de estandarización, rendimiento y ahorro en el mantenimiento de los estándares web. Fuera de este ecosistema predominante quedan principalmente Mozilla Firefox,
@@ -90,12 +90,26 @@
 </div>
 
 <div>
-    <h2 style="margin-left: 110px;"><i class="bi bi-3-circle"> </i>Ejemplo práctico de compatibilidad</h2>
-    <div class="card" style="margin-left: 110px;">
-    <div class="card-body">Basic card</div>
+    <h2 style="margin-left: 150px;"><i class="bi bi-3-circle"> </i>Ejemplo real de diferencia de compatibilidad</h2>
+    <br>
+    <div class="card" style="margin-left: 110px; margin-right: 100px";>
+    <div class="card-header">
+    Ejemplo de Compatibilidad: Propiedad CSS texto-box-trim
     </div>
+    <div class="card-body">
+    <h5 class="card-title">Análisis de la característica CSS</h5>
+    <p class="card-text"><strong>Problema de compatibilidad:</strong> No funciona igual en todos los navegadores; actualmente presenta un soporte muy limitado o nulo en navegadores como Firefox y Safari, mientras que en otros requiere configuraciones experimentales, provocando diferencias visuales.
+    </p>
+    <a href="https://caniuse.com/?search=text-box-trim" class="btn btn-primary">Acceder a la web de Caniuse</a>
+  </div>
 </div>
+</div>
+<br>
 
+<div style="margin-left: 150px;">
+    <h2><i class="bi bi-4-circle"> </i>Reflexión</h2>
+        <p>Probaría primero en Google Chrome por ser el navegador líder en dispositivos móviles y de escritorio, optimizando el diseño adaptativo con el uso del viewport. Posteriormente, expandiría las pruebas a otros navegadores según el presupuesto acordado con el cliente, recordando que el soporte multiplataforma influye directamente en el coste del desarrollo.</p>
+</div>
 
   <!-- JS de Bootstrap (navbar que se pliega, modales, dropdowns...). Al final del body -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
