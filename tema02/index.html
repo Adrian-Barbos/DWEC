@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Título de la página</title>
+
+  <!-- CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Iconos de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Tu CSS, SIEMPRE después del de Bootstrap -->
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+    <a class="navbar-brand" href="#"><i class="bi bi-person"></i></i> Adrián Barbos</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="interaccion.html">Interacción</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container mt-3">
+  <h2><i class="bi bi-1-circle"> </i>Tabla de navegadores y motores</h2>
+  <table class="table">
+    <thead>
+      <tr class="table-dark">
+        <th>Navegador</th>
+        <th>Empresa que lo desarrolla</th>
+        <th>Motor de renderizado</th>
+        <th>Motor de JavaScript</th>
+        <th>¿Está basado en Chromium?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-warning">
+        <td>Chrome</td>
+        <td>Google</td>
+        <td>Blink</td>
+        <td>V8</td>
+        <td>Basado en Chromium</td>
+      </tr>      
+      <tr class="table-primary">
+        <td>Firefox</td>
+        <td>Mozilla</td>
+        <td>Gecko</td>
+        <td>SpiderMonkey</td>
+        <td>Mozilla</td>
+      </tr>
+      <tr class="table-success">
+        <td>Safari</td>
+        <td>Apple</td>
+        <td>WebKit</td>
+        <td>JavaScriptCode</td>
+        <td>Apple</td>
+      </tr>
+      <tr class="table-danger">
+        <td>Edge</td>
+        <td>Microsoft</td>
+        <td>Blink (desde 2020) </td>
+        <td>V8</td>
+        <td>Basado en Chromium</td>
+      </tr>
+      <tr class="table-info">
+        <td>Opera</td>
+        <td>Opera</td>
+        <td>Blink</td>
+        <td>V8</td>
+        <td>Basado en Chromium</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <div style="margin-left: 110px;">
+        <br>
+            <h2><i class="bi bi-2-circle"> </i>Motores de los navegadores y su impacto en el desarrollo</h2>
+            <p>La gran mayoría de los navegadores actuales comparten un motor de renderizado común, principalmente Blink que está basado en Chromium, debido a las ventajas de estandarización, rendimiento y ahorro en el mantenimiento de los estándares web. Fuera de este ecosistema predominante quedan principalmente Mozilla Firefox,
+            que utiliza su propio motor Gecko, y Apple Safari, que emplea WebKit. Para quien diseña y desarrolla una página web, esta situación tiene cosas buenas y cosas malas: por un lado, simplifica enormemente el trabajo al reducir los errores de compatibilidad visual entre la mayoría de plataformas; por otro, obliga a mantener la precaución de probar el código en los navegadores
+            independientes para garantizar una experiencia de usuario universal y sin fallos inesperados.</p>
+</div>
+
+<div>
+    <h2 style="margin-left: 110px;"><i class="bi bi-3-circle"> </i>Ejemplo práctico de compatibilidad</h2>
+    <div class="card" style="margin-left: 110px;">
+    <div class="card-body">Basic card</div>
+    </div>
+</div>
+
+
+  <!-- JS de Bootstrap (navbar que se pliega, modales, dropdowns...). Al final del body -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
