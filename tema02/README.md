@@ -12,7 +12,7 @@ En esta captura se muestra la página `index.html` ejecutándose en el navegador
 
 ### b. `interaccion.html` en modo dispositivo
 
-![interaccion.html en modo dispositivo](capturas/02-interaccion-movil.png)
+![interaccion.html en modo dispositivo](imagenes/movil.png)
 
 En esta captura se muestra `interaccion.html` utilizando las herramientas de desarrollador del navegador en modo dispositivo, simulando la visualización de la página en un teléfono móvil. Se pueden observar los tres botones de interacción.
 
