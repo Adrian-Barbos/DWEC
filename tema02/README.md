@@ -34,7 +34,7 @@ Esta segunda captura muestra el mismo botón ejecutado en el segundo navegador. 
 
 ### e. VS Code con Live Server
 
-![VS Code y Live Server](capturas/06-vscode-live-server.png)
+![VS Code y Live Server](imagenes/LiveServer.png)
 
 En esta captura se muestra Visual Studio Code con la carpeta `tema02` abierta y la página ejecutándose mediante Live Server.
 
