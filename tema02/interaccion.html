@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,40 +13,70 @@
   <!-- Tu CSS, SIEMPRE después del de Bootstrap -->
   <link href="css/estilos.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container">
-    <a class="navbar-brand" href="#"><i class="bi bi-person"></i></i> Adrián Barbos</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-    <span class="navbar-toggler-icon"></span>
-    </button>
+      <a class="navbar-brand" href="#"><i class="bi bi-person"></i></i> Adrián Barbos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="interaccion.html">Interacción</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="interaccion.html">Interacción</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<ul class="list-group">
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    Inbox
-    <span class="badge bg-primary rounded-pill">12</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    Ads
-    <span class="badge bg-primary rounded-pill">50</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    Junk
-    <span class="badge bg-primary rounded-pill">99</span>
-  </li>
-</ul>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-4">
+
+        <div class="card">
+          <div class="card-body">
+            <button
+              type="button"
+              class="btn btn-primary"
+            >
+              Saludar
+            </button>
+          </div>
+        </div>
+        <br>
+        <div class="card">
+          <div class="card-body">
+            <button
+              type="button"
+              class="btn btn-danger"
+            >
+              Simular un error
+            </button>
+          </div>
+        </div>
+         <br>
+        <div class="card">
+          <div class="card-body">
+            <button
+              type="button"
+              class="btn btn-warning"
+            >
+              ¿ Que navegador soy?
+            </button>
+          </div>
+    
+        
+
+      </div>
+    </div>
+
+  </div>
 
   <!-- JS de Bootstrap (navbar que se pliega, modales, dropdowns...). Al final del body -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
