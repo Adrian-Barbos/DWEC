@@ -6,3 +6,8 @@ function saludar () {
 function error_consola () {
     console.error("Error");
 }
+
+function ver_navegador () {
+    alert(navigator.userAgent);
+    console.log(navigator.userAgent)
+}
