@@ -6,7 +6,7 @@ Todas las capturas de esta práctica han sido realizadas en mi propio equipo y e
 
 ### a. `index.html` en el ordenador
 
-![index.html en el ordenador](capturas/01-index.p)
+![index.html en el ordenador](imagenes/index.png)
 
 En esta captura se muestra la página `index.html` ejecutándose en el navegador. En la barra de navegación aparece mi nombre, **Adrián Barbos**, y se puede observar la tabla comparativa de navegadores y motores.
 
