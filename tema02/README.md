@@ -18,13 +18,13 @@ En esta captura se muestra `interaccion.html` utilizando las herramientas de des
 
 ### c. Consola con las trazas de los tres botones
 
-![Consola con las trazas](capturas/03-consola.png)
+![Consola con las trazas](imagenes/trazas.png)
 
 En esta captura se muestra la consola del navegador después de utilizar los tres botones. El botón **Saludar** genera un mensaje mediante `console.log()`, el botón **Simular un error** utiliza `console.error()` y el botón **¿Qué navegador soy?** muestra en la consola el `userAgent` del navegador.
 
 ### d. `alert()` del botón «¿Qué navegador soy?» en los dos navegadores
 
-![Alert del primer navegador](capturas/04-alert-navegador-1.png)
+![Alert del primer navegador](imagenes/simularunerror.png)
 
 Esta captura muestra el `alert()` generado al pulsar el botón **¿Qué navegador soy?** en el primer navegador utilizado. El mensaje contiene la información proporcionada por `navigator.userAgent`.
 
@@ -34,7 +34,7 @@ Esta segunda captura muestra el mismo botón ejecutado en el segundo navegador. 
 
 ### e. VS Code con Live Server
 
-![VS Code y Live Server](capturas/06-vscode-live-server.png)
+![VS Code y Live Server](imagenes/LiveServer.png)
 
 En esta captura se muestra Visual Studio Code con la carpeta `tema02` abierta y la página ejecutándose mediante Live Server.
 
