@@ -11,3 +11,8 @@ function ver_navegador () {
     alert(navigator.userAgent);
     console.log(navigator.userAgent)
 }
+
+function despedida () {
+    alert("Adiós")
+    console.log ("Se ejecutó la acción: Despedida.");
+}
