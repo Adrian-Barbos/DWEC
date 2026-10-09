@@ -220,33 +220,24 @@
 
         <!-- 2) El código: cuando termines, copia aquí tu función ejercicio1() de js/app.js.
                 Si tu código lleva los signos < o >, escríbelos como &lt; y &gt; -->
-        <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio2 () {
+        <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio3() {
+    console.log("--- Ejercicio 3 · Coerción y comparaciones ---");
 
-    console.log("--- Ejercicio 2 · Conversiones explícitas ---");
+    // 1. Expresiones mezclando tipos (6 en total, al menos 2 propias)
+    console.log('"5" - 2 →', "5" - 2);
+    console.log('"5" + 2 →', "5" + 2);
+    console.log('"10" / "2" →', "10" / "2");
+    console.log('"tres" * 2 →', "tres" * 2);
+    console.log('true + 1 →', true + 1);
+    console.log('false + "hola" →', false + "hola");
 
-    const string = String(123); // Espero: 123
-    console.log("String(123) →", string, "| typeof:", typeof string);
-
-    const numero = Number("123"); // Espero: "123"
-    console.log("Number('123') →", numero, "| typeof:", typeof numero);
-
-    const numero2 = Number("12abc"); // Espero: NaN
-    console.log("Number('12abc') →", numero2, "| typeof:", typeof numero2);
-
-    const numero3 = Number(""); // Espero: 0
-    console.log("Number('') →", numero3, "| typeof:", typeof numero3);
-
-    const numero4 = Number(true); // Espero: 1
-    console.log("Number(true) →", numero4, "| typeof:", typeof numero4);
-
-    const boolean = Boolean(0); // Espero: false
-    console.log("Boolean(0) →", boolean, "| typeof:", typeof boolean);
-
-    const boolean2 = Boolean("texto"); // Espero: true
-    console.log("Boolean('texto') →", boolean2, "| typeof:", typeof boolean2);
-
-    const boolean3 = Boolean(""); // Espero: false
-    console.log("Boolean('') →", boolean3, "| typeof:", typeof boolean3);
+    // 2. Comparaciones con == y con ===
+    console.log('5 == "5" →', 5 == "5");
+    console.log('5 === "5" →', 5 === "5");
+    console.log('0 == false →', 0 == false);
+    console.log('0 === false →', 0 === false);
+    console.log('null == undefined →', null == undefined);
+    console.log('null === undefined →', null === undefined);
 }
 </code></pre>
 
@@ -256,19 +247,15 @@
         <div class="table-responsive">
           <table class="table table-sm table-striped align-middle mb-2">
             <thead class="table-primary">
-              <tr><th scope="col">Conversión</th><th scope="col">Espero</th><th scope="col">Sale</th></tr>
+              <tr><th scope="col">Expresión</th><th scope="col">Espero</th><th scope="col">Sale</th></tr>
             </thead>
             <tbody>
-              <tr><th scope="row">String(123)</th><td><code>"123"</code></td><td><code>string</code></td></tr>
-              <tr><th scope="row">Number("123")</th><td><code>123</code></td><td><code>number</code></td></tr>
-       
-              <tr><th scope="row">Number("12abc")</th><td><code>"12abc"</code><span class="badge text-bg-danger ms-1">Fallé</span></td><td><code>number</code></td></tr>
-              
-              <tr><th scope="row">Number("123")</th><td><code>123</code></td><td><code>number</code></td></tr>
-              <tr><th scope="row">Number(true)</th><td><code>1</code></td><td><code>number</code></td></tr>
-              <tr><th scope="row">Boolean(0)</th><td><code>false</code></td><td><code>boolean</code></td></tr>
-              <tr><th scope="row">Boolean("texto")</th><td><code>true</code></td><td><code>boolean</code></td></tr>
-              <tr><th scope="row">Boolean("")</th><td><code>false</code></td><td><code>boolean</code></td></tr>
+              <tr><th scope="row"><code>"5" - 2</code></th><td><code>3</code></td><td><code>3</code></td></tr>
+              <tr><th scope="row"><code>"5" + 2</code></th><td><code>"52"</code></td><td><code>"52"</code></td></tr>
+              <tr><th scope="row"><code>5 == "5"</code></th><td><code>true</code></td><td><code>true</code></td></tr>
+              <tr><th scope="row"><code>5 === "5"</code></th><td><code>false</code></td><td><code>false</code></td></tr>
+              <tr><th scope="row"><code>0 == false</code></th><td><code>true</code></td><td><code>true</code></td></tr>
+              <tr><th scope="row"><code>0 === false</code></th><td><code>false</code></td><td><code>false</code></td></tr>
             </tbody>
           </table>
         </div>
@@ -276,12 +263,14 @@
       <!-- 5) El botón. onclick="ejercicio1()" hace que, al pulsarlo, se ejecute la función ejercicio1() de js/app.js.
               Cómo funciona lo veremos más adelante, con los eventos. De momento, cópialo tal cual y cambia solo el número. -->
       <div class="card-footer">
-        <button type="button" class="btn btn-primary" onclick="ejercicio2()">
-          <i class="bi bi-play-fill"></i> Ejecutar ejercicio 2
+        <button type="button" class="btn btn-primary" onclick="ejercicio3()">
+          <i class="bi bi-play-fill"></i> Ejecutar ejercicio 3
         </button>
         <span class="small text-body-secondary ms-2">El resultado sale en la consola (F12).</span>
       </div>
     </section>
+
+
 
     <!-- ============================================================
          EJERCICIOS 2, 3 Y 4 · Los haces tú
