@@ -70,3 +70,26 @@ function ejercicio3() {
     console.log('null == undefined →', null == undefined);
     console.log('null === undefined →', null === undefined);
 }
+
+function ejercicio4() {
+    console.log("--- Ejercicio 4 · Tu ficha con plantillas de cadena ---");
+    //Mis datos personales
+    const nombre = "Adrián";
+    const ciclo = "Desarrollo de aplicaciones web";
+    const curso = "2026/2027";
+    const afición = "gimnasio";
+    //Horas de estudio iniciales
+    let horasEstudiadas = 20;
+    console.log("Horas estudiadas: ", horasEstudiadas);
+    //Horas de estudio tras añadir 5
+    horasEstudiadas += 5;
+    console.log("Horas estudiadas tras añadir 5: ", horasEstudiadas);
+
+    const datospersonales = `Mi nombre es ${nombre}, estudio ${ciclo} en el curso ${curso} y mi afición es ${afición}.`;
+    alert(datospersonales);
+    console.log(datospersonales);
+
+    
+    
+
+}

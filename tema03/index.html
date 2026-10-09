@@ -274,6 +274,75 @@
       </div>
     </section>
 
+    <!-- ============================================================
+         EJERCICIO 4 · Const y let
+         ============================================================ -->
+
+    <section class="card mb-4 shadow-sm">
+
+      <!-- 1) Título del ejercicio -->
+      <div class="card-header d-flex align-items-center gap-2">
+        <span class="badge text-bg-primary">Ejercicio 4</span>
+        <h2 class="h5 mb-0">Tu ficha con plantillas de cadena</h2>
+      </div>
+
+      <div class="card-body">
+        <!-- 2) El código: cuando termines, copia aquí tu función ejercicio4() de js/app.js.
+                Si tu código lleva los signos < o >, escríbelos como &lt; y &gt; -->
+        <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio4() {
+    console.log("--- Ejercicio 4 · Tu ficha con plantillas de cadena ---");
+
+    // 1. Expresiones mezclando tipos (6 en total, al menos 2 propias)
+    console.log('"5" - 2 →', "5" - 2);
+    console.log('"5" + 2 →', "5" + 2);
+    console.log('"10" / "2" →', "10" / "2");
+    console.log('"tres" * 2 →', "tres" * 2);
+    console.log('true + 1 →', true + 1);
+    console.log('false + "hola" →', false + "hola");
+
+    // 2. Comparaciones con == y con ===
+    console.log('5 == "5" →', 5 == "5");
+    console.log('5 === "5" →', 5 === "5");
+    console.log('0 == false →', 0 == false);
+    console.log('0 === false →', 0 === false);
+    console.log('null == undefined →', null == undefined);
+    console.log('null === undefined →', null === undefined);
+}
+</code></pre>
+
+        <!-- 3) La tabla «Espero / Sale», rellenada a mano.
+                Una fila por variable. Si te equivocas, añade en la columna «Sale» el badge:
+                <span class="badge text-bg-danger">Fallé</span> -->
+        <div class="table-responsive">
+          <table class="table table-sm table-striped align-middle mb-2">
+            <thead class="table-primary">
+              <tr><th scope="col">Expresión</th><th scope="col">Espero</th><th scope="col">Sale</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row"><code>"5" - 2</code></th><td><code>3</code></td><td><code>3</code></td></tr>
+              <tr><th scope="row"><code>"5" + 2</code></th><td><code>"52"</code></td><td><code>"52"</code></td></tr>
+              <tr><th scope="row"><code>5 == "5"</code></th><td><code>true</code></td><td><code>true</code></td></tr>
+              <tr><th scope="row"><code>5 === "5"</code></th><td><code>false</code></td><td><code>false</code></td></tr>
+              <tr><th scope="row"><code>0 == false</code></th><td><code>true</code></td><td><code>true</code></td></tr>
+              <tr><th scope="row"><code>0 === false</code></th><td><code>false</code></td><td><code>false</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+       <!-- 4) Tu explicación -->
+        <p class="small mb-0"><strong>Cuando manda la cadena y cuándo manda el número:</strong> [Manda la cadena con el operador + porque se usa para concatenar texto. En cambio, manda el número con los demás operadores aritméticos (como -, * o /), ya que fuerzan la conversión a valor numérico.]</p>
+      </div>
+
+      <!-- 5) El botón. onclick="ejercicio1()" hace que, al pulsarlo, se ejecute la función ejercicio1() de js/app.js.
+              Cómo funciona lo veremos más adelante, con los eventos. De momento, cópialo tal cual y cambia solo el número. -->
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="ejercicio3()">
+          <i class="bi bi-play-fill"></i> Ejecutar ejercicio 3
+        </button>
+        <span class="small text-body-secondary ms-2">El resultado sale en la consola (F12).</span>
+      </div>
+    </section>
+
 
 
     <!-- ============================================================
