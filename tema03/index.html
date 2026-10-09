@@ -141,30 +141,35 @@
 
         <!-- 2) El código: cuando termines, copia aquí tu función ejercicio1() de js/app.js.
                 Si tu código lleva los signos < o >, escríbelos como &lt; y &gt; -->
-        <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio1() {
-        function ejercicio1 () {
+        <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio2 () {
 
-    console.log("--- Ejercicio 1 · Variables y typeof ---");
+    console.log("--- Ejercicio 2 · Conversiones explícitas ---");
 
-    //Declarar las variables
+    const string = String(123); // Espero: 123
+    console.log("String(123) →", string, "| typeof:", typeof string);
 
-    const velocidadMaxima = 220;   // number
-    const marca = "Audi"; // string
-    const tieneSeguro = true; // boolean
-    const historialAccidentes = null; // null 
-    const numeroChasis = 89342893428952389n; // bigint
+    const numero = Number("123"); // Espero: "123"
+    console.log("Number('123') →", numero, "| typeof:", typeof numero);
 
-    let tallerActual;
-    tallerActual = undefined; // undefined
+    const numero2 = Number("12abc"); // Espero: NaN
+    console.log("Number('12abc') →", numero2, "| typeof:", typeof numero2);
 
-    console.log("velocidad máxima =", velocidadMaxima, "→", typeof velocidadMaxima);
-    console.log("marca =", marca, "→", typeof marca);
-    console.log("tiene seguro =", tieneSeguro, "→", typeof tieneSeguro);
-    console.log("historial de accidentes =", historialAccidentes, "→", typeof historialAccidentes);
-    console.log("número de chasis =", numeroChasis, "→", typeof numeroChasis);
-    console.log("taller actual =", tallerActual, "→", typeof tallerActual);
+    const numero3 = Number(""); // Espero: 0
+    console.log("Number('') →", numero3, "| typeof:", typeof numero3);
+
+    const numero4 = Number(true); // Espero: 1
+    console.log("Number(true) →", numero4, "| typeof:", typeof numero4);
+
+    const boolean = Boolean(0); // Espero: false
+    console.log("Boolean(0) →", boolean, "| typeof:", typeof boolean);
+
+    const boolean2 = Boolean("texto"); // Espero: true
+    console.log("Boolean('texto') →", boolean2, "| typeof:", typeof boolean2);
+
+    const boolean3 = Boolean(""); // Espero: false
+    console.log("Boolean('') →", boolean3, "| typeof:", typeof boolean3);
 }
-}</code></pre>
+</code></pre>
 
         <!-- 3) La tabla «Espero / Sale», rellenada a mano.
                 Una fila por variable. Si te equivocas, añade en la columna «Sale» el badge:
