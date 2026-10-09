@@ -24,7 +24,7 @@
 
 ![Consola del ejercicio 1](capturas/b-consola-ej1.png)
 
-[Qué se ve, en una o dos líneas.]
+[En esta captura se aprecia la pantalla dividida mostrando la página web del Ejercicio 1 a la izquierda junto al botón "Ejecutar ejercicio 1", y el panel de herramientas de desarrollo (DevTools) abierto en la pestaña Console a la derecha.]
 
 ### c) Consola del ejercicio 2
 
