@@ -30,28 +30,29 @@
 
 ![Consola del ejercicio 2](capturas/c-consola-ej2.png)
 
-[Qué se ve, en una o dos líneas.]
+[Se muestra la interfaz dividida con el Ejercicio 2 ("Conversiones explícitas") a la izquierda y la consola de desarrollo a la derecha, donde aparecen impresos los resultados y tipos de datos tras presionar el botón "Ejecutar ejercicio 2".]
 
 ### d) Consola del ejercicio 3
 
 ![Consola del ejercicio 3](capturas/d-consola-ej3.png)
 
-[Qué se ve, en una o dos líneas.]
+[Se observa la vista dividida con el Ejercicio 3 ("Coerción y comparaciones") a la izquierda y la consola a la derecha, donde se visualizan las salidas generadas al pulsar "Ejecutar ejercicio 3" sobre coerción de tipos y comparaciones en JavaScript.]
 
 ### e) Consola del ejercicio 4, con el error de la const
 
 ![Consola del ejercicio 4 con el error de la const](capturas/e-consola-ej4.png)
 
-[Qué se ve, en una o dos líneas.]
+[En la pantalla dividida se aprecia la ejecución del Ejercicio 4 a la izquierda y la consola a la derecha, donde se genera un error del tipo Uncaught TypeError: Assignment to constant variable. al intentar reasignar una constante (const).]
 
 ## Reflexión
 
-[De 5 a 8 líneas: ¿qué conversiones te resultaron más intuitivas y cuáles te sorprendieron? Pon ejemplos concretos de tus tablas.]
+[Las conversiones explícitas como String(123) o Number("123") resultaron completamente intuitivas, ya que transforman los datos de forma predecible y directa según su representación literal. Sin embargo, la coerción implícita de tipos produjo los comportamientos más sorprendentes; por ejemplo, la expresión "5" + 2 da como resultado "52" porque el operador + prioriza la concatenación de texto sobre la suma. En cambio, al utilizar otros operadores aritméticos como en "5" - 2, JavaScript fuerza la conversión a número y devuelve 3. De igual forma, me llamó la atención que Number("12abc") devuelva NaN en lugar de extraer la parte numérica, o que al comparar mediante la igualdad débil 0 == false obtengamos true, mientras que con la igualdad estricta 0 === false se obtiene false al evaluar también el tipo de dato.]
 
 ## Fuentes
 
-- [Título de la página](https://enlace-a-la-fuente)
+- [PDF. Desarrollo web en entorno cliente. Tema 3]
+- [Presentación Tema 3]
 
 ## Uso de IA
 
-[Si has usado IA: qué herramienta, para qué y qué hiciste después con su respuesta. Si no la has usado, borra este apartado.]
+[He usado la IA para que me ayude con el README.md, también para que me ayude en algún ejercicio ya que faltan ejemplos prácticos en los PDF. La información que me da la IA no la copio y la pego, hago el ejercicio con toda la información que pueda encontrar en los PDF, pero si ya veo que tengo un error el cuál me es imposible de resolver o un ejercicio práctico que lo puedo tomar de referencia de los apuntes pero no lo entiendo para hacer el mío, y ahí es cuando acudo a la IA.]
