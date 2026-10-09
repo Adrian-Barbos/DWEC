@@ -291,22 +291,28 @@
                 Si tu código lleva los signos < o >, escríbelos como &lt; y &gt; -->
         <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio4() {
     console.log("--- Ejercicio 4 · Tu ficha con plantillas de cadena ---");
+    //Mis datos personales
+    const nombre = "Adrián";
+    const ciclo = "Desarrollo de aplicaciones web";
+    const curso = "2026/2027";
+    const afición = "gimnasio";
+    //Horas de estudio iniciales
+    let horasEstudiadas = 20;
+    console.log("Horas estudiadas: ", horasEstudiadas);
+    //Horas de estudio tras añadir 5
+    horasEstudiadas += 5;
+    console.log("Horas estudiadas tras añadir 5: ", horasEstudiadas);
 
-    // 1. Expresiones mezclando tipos (6 en total, al menos 2 propias)
-    console.log('"5" - 2 →', "5" - 2);
-    console.log('"5" + 2 →', "5" + 2);
-    console.log('"10" / "2" →', "10" / "2");
-    console.log('"tres" * 2 →', "tres" * 2);
-    console.log('true + 1 →', true + 1);
-    console.log('false + "hola" →', false + "hola");
+    const datospersonales = `Mi nombre es ${nombre}, estudio ${ciclo} en el curso ${curso} y mi afición es ${afición}.`;
+    alert(datospersonales);
+    console.log(datospersonales);
 
-    // 2. Comparaciones con == y con ===
-    console.log('5 == "5" →', 5 == "5");
-    console.log('5 === "5" →', 5 === "5");
-    console.log('0 == false →', 0 == false);
-    console.log('0 === false →', 0 === false);
-    console.log('null == undefined →', null == undefined);
-    console.log('null === undefined →', null === undefined);
+    const datospersonales2 = "Mi nombre es " + nombre + ", estudio " + ciclo + " en el curso " + curso + " y mi afición es " + afición + ".";
+    console.log(datospersonales2);
+
+    const sonIguales = (datospersonales === datospersonales2);
+    console.log(sonIguales);
+
 }
 </code></pre>
 

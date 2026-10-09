@@ -73,11 +73,13 @@ function ejercicio3() {
 
 function ejercicio4() {
     console.log("--- Ejercicio 4 · Tu ficha con plantillas de cadena ---");
+
     //Mis datos personales
     const nombre = "Adrián";
     const ciclo = "Desarrollo de aplicaciones web";
     const curso = "2026/2027";
     const afición = "gimnasio";
+
     //Horas de estudio iniciales
     let horasEstudiadas = 20;
     console.log("Horas estudiadas: ", horasEstudiadas);
@@ -85,13 +87,16 @@ function ejercicio4() {
     horasEstudiadas += 5;
     console.log("Horas estudiadas tras añadir 5: ", horasEstudiadas);
 
-    const datospersonales = "Mi nombre es " + nombre + ", estudio " + ciclo + " en el curso " + curso + " y mi afición es " + afición + ".";
+    // Mensaje usando plantilla con backticks
+    const datospersonales = `Mi nombre es ${nombre}, estudio ${ciclo} en el curso ${curso} y mi afición es ${afición}.`;
     alert(datospersonales);
     console.log(datospersonales);
 
+    // Mensaje usando concatenación con +
     const datospersonales2 = "Mi nombre es " + nombre + ", estudio " + ciclo + " en el curso " + curso + " y mi afición es " + afición + ".";
     console.log(datospersonales2);
 
+    // Comprobamos si los dos mensajes son iguales (da true)
     const sonIguales = (datospersonales === datospersonales2);
     console.log(sonIguales);
 
