@@ -85,11 +85,14 @@ function ejercicio4() {
     horasEstudiadas += 5;
     console.log("Horas estudiadas tras añadir 5: ", horasEstudiadas);
 
-    const datospersonales = `Mi nombre es ${nombre}, estudio ${ciclo} en el curso ${curso} y mi afición es ${afición}.`;
+    const datospersonales = "Mi nombre es " + nombre + ", estudio " + ciclo + " en el curso " + curso + " y mi afición es " + afición + ".";
     alert(datospersonales);
     console.log(datospersonales);
 
-    
-    
+    const datospersonales2 = "Mi nombre es " + nombre + ", estudio " + ciclo + " en el curso " + curso + " y mi afición es " + afición + ".";
+    console.log(datospersonales2);
+
+    const sonIguales = (datospersonales === datospersonales2);
+    console.log(sonIguales);
 
 }
