@@ -50,3 +50,23 @@ function ejercicio2 () {
     const boolean3 = Boolean(""); // Espero: false
     console.log("Boolean('') →", boolean3, "| typeof:", typeof boolean3);
 }
+
+function ejercicio3() {
+    console.log("--- Ejercicio 3 · Coerción y comparaciones ---");
+
+    // 1. Expresiones mezclando tipos (6 en total, al menos 2 propias)
+    console.log('"5" - 2 →', "5" - 2);
+    console.log('"5" + 2 →', "5" + 2);
+    console.log('"10" / "2" →', "10" / "2");
+    console.log('"tres" * 2 →', "tres" * 2);
+    console.log('true + 1 →', true + 1);
+    console.log('false + "hola" →', false + "hola");
+
+    // 2. Comparaciones con == y con ===
+    console.log('5 == "5" →', 5 == "5");
+    console.log('5 === "5" →', 5 === "5");
+    console.log('0 == false →', 0 == false);
+    console.log('0 === false →', 0 === false);
+    console.log('null == undefined →', null == undefined);
+    console.log('null === undefined →', null === undefined);
+}
