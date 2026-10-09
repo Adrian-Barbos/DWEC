@@ -13,6 +13,7 @@ function ejercicio1 () {
     let tallerActual;
     tallerActual = undefined; // undefined
 
+    //Mostrar en colsola las variables
     console.log("velocidad máxima =", velocidadMaxima, "→", typeof velocidadMaxima);
     console.log("marca =", marca, "→", typeof marca);
     console.log("tiene seguro =", tieneSeguro, "→", typeof tieneSeguro);
