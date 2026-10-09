@@ -18,7 +18,7 @@
 
 <img src="capturas/a-pagina.png" alt="La página entera con mi nombre en la navbar" width="600">
 
-[Qué se ve: tu nombre en la navbar, las cuatro cards y los fallos de predicción marcados.]
+[En la captura adjunta de la interfaz de usuario se pueden observar con claridad los siguientes elementos:   Navbar superior: Muestra el nombre de usuario Adrián Barcos en la esquina superior izquierda de la barra de navegación.   Estructura principal: La vista se compone de cuatro tarjetas (cards) estructuradas verticalmente, correspondientes a distintos bloques o ejercicios:   Variables y typeof   Conversiones explícitas   Coerción y comparaciones   Tu ficha con plantillas de cadena   Predicciones y errores: Dentro de las tablas asociadas a cada tarjeta se visualizan las celdas comparativas entre el valor esperado (Espero) y el valor obtenido (Sale). Los fallos de predicción quedan explícitamente resaltados con fondo o etiquetas en color rojo donde los valores no coinciden.]
 
 ### b) Consola del ejercicio 1
 
