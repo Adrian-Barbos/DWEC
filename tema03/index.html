@@ -181,15 +181,15 @@
             </thead>
             <tbody>
               <tr><th scope="row">String(123)</th><td><code>"123"</code></td><td><code>string</code></td></tr>
-              <tr><th scope="row">Number('123')</th><td><code>123</code></td><td><code>number</code></td></tr>
+              <tr><th scope="row">Number("123")</th><td><code>123</code></td><td><code>number</code></td></tr>
        
-              <tr><th scope="row">Number('12abc')</th><td><code>NaN</code><span class="badge text-bg-danger ms-1">Fallé</span></td><td><code>number</code></td></tr>
+              <tr><th scope="row">Number("12abc")</th><td><code>"12abc"</code><span class="badge text-bg-danger ms-1">Fallé</span></td><td><code>number</code></td></tr>
               
-              <tr><th scope="row">Number('')</th><td><code>0</code></td><td><code>number</code></td></tr>
+              <tr><th scope="row">Number("123")</th><td><code>123</code></td><td><code>number</code></td></tr>
               <tr><th scope="row">Number(true)</th><td><code>1</code></td><td><code>number</code></td></tr>
               <tr><th scope="row">Boolean(0)</th><td><code>false</code></td><td><code>boolean</code></td></tr>
-              <tr><th scope="row">Boolean('texto')</th><td><code>true</code></td><td><code>boolean</code></td></tr>
-              <tr><th scope="row">Boolean('')</th><td><code>false</code></td><td><code>boolean</code></td></tr>
+              <tr><th scope="row">Boolean("texto")</th><td><code>true</code></td><td><code>boolean</code></td></tr>
+              <tr><th scope="row">Boolean("")</th><td><code>false</code></td><td><code>boolean</code></td></tr>
             </tbody>
           </table>
         </div>
