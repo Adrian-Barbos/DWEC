@@ -68,7 +68,28 @@
         <!-- 2) El código: cuando termines, copia aquí tu función ejercicio1() de js/app.js.
                 Si tu código lleva los signos < o >, escríbelos como &lt; y &gt; -->
         <pre class="bg-dark text-light p-3 rounded small mb-4"><code>function ejercicio1() {
-  
+        function ejercicio1 () {
+
+    console.log("--- Ejercicio 1 · Variables y typeof ---");
+
+    //Declarar las variables
+
+    const velocidadMaxima = 220;   // number
+    const marca = "Audi"; // string
+    const tieneSeguro = true; // boolean
+    const historialAccidentes = null; // null 
+    const numeroChasis = 89342893428952389n; // bigint
+
+    let tallerActual;
+    tallerActual = undefined; // undefined
+
+    console.log("velocidad máxima =", velocidadMaxima, "→", typeof velocidadMaxima);
+    console.log("marca =", marca, "→", typeof marca);
+    console.log("tiene seguro =", tieneSeguro, "→", typeof tieneSeguro);
+    console.log("historial de accidentes =", historialAccidentes, "→", typeof historialAccidentes);
+    console.log("número de chasis =", numeroChasis, "→", typeof numeroChasis);
+    console.log("taller actual =", tallerActual, "→", typeof tallerActual);
+}
 }</code></pre>
 
         <!-- 3) La tabla «Espero / Sale», rellenada a mano.
@@ -80,8 +101,12 @@
               <tr><th scope="col">Variable</th><th scope="col">Valor</th><th scope="col">Espero</th><th scope="col">Sale</th></tr>
             </thead>
             <tbody>
-              <tr><th scope="row">edad</th><td><code>20</code></td><td><code>number</code></td><td><code>number</code></td></tr>
-              <tr><th scope="row">[variable]</th><td><code>[valor]</code></td><td><code>[lo que esperas]</code></td><td><code>[lo que sale]</code></td></tr>
+              <tr><th scope="row">velocidadMaxima</th><td><code>220</code></td><td><code>number</code></td><td><code>number</code></td></tr>
+              <tr><th scope="row">marca</th><td><code>Audi</code></td><td><code>string</code></td><td><code>string</code></td></tr>
+              <tr><th scope="row">tieneSeguro</th><td><code>true</code></td><td><code>boolean</code></td><td><code>boolean</code></td></tr>
+              <tr><th scope="row">historialAccidentes</th><td><code>null</code></td><td><code>object</code></td><td><code>object</code></td></tr>
+              <tr><th scope="row">numeroChasis</th><td><code>89342893428952389n</code></td><td><code>bigint</code></td><td><code>bigint</code></td></tr>
+              <tr><th scope="row">tallerActual</th><td><code>undefined</code></td><td><code>undefined</code></td><td><code>undefined</code></td></tr>
             </tbody>
           </table>
         </div>
