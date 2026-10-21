@@ -16,3 +16,5 @@ function despedida () {
     alert("Adiós")
     console.log ("Se ejecutó la acción: Despedida.");
 }
+
+
