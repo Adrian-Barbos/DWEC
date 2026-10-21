@@ -242,15 +242,74 @@ function bucleDoWhile() {
 // ============================================================
 
 function badgesFor() {
-  // TODO: como bucleFor(), pero cada vuelta añade un badge con el número de la repetición:
-  //         anadirBadge(i, "primary");
-  // TODO: los pares, de un color y los impares, de otro. Elige el color con el operador ternario.
+
+  const veces = leerNumero("numero1");
+  limpiarSalida();
+
+  // Validación: si falta (isNaN), tiene decimales o pasa de MAXIMO_REPETICIONES
+  if (isNaN(veces) || !Number.isInteger(veces) || veces > MAXIMO_REPETICIONES) {
+    mostrar("Error: número inválido, con decimales o superior al máximo permitido.", "danger");
+    return;
+  }
+
+  // Bucle for que recorre desde 1 hasta el número de veces indicado
+  for (let i = 1; i <= veces; i++) {
+    // Operador ternario para elegir el color: pares de un color, impares de otro
+    const color = (i % 2 === 0) ? "primary" : "secondary";
+    
+    // Añade el badge con el número de la repetición y el color correspondiente
+    anadirBadge(i, color);
+  }
 }
 
 function badgesWhile() {
   // TODO: lo mismo que badgesFor(), con un while.
+
+  const veces = leerNumero("numero1");
+  limpiarSalida();
+
+  // Validación: si falta (isNaN), tiene decimales o pasa de MAXIMO_REPETICIONES
+  if (isNaN(veces) || !Number.isInteger(veces) || veces > MAXIMO_REPETICIONES) {
+    mostrar("Error: número inválido, con decimales o superior al máximo permitido.", "danger");
+    return;
+  }
+
+  let i = 1;
+
+  // Bucle while que añade badges en cada vuelta
+  while (i <= veces) {
+    // Usamos el operador ternario para elegir el color: pares de un color, impares de otro
+    const color = (i % 2 === 0) ? "primary" : "secondary";
+    
+    // Añade el badge con el número de la repetición y el color correspondiente
+    anadirBadge(i, color);
+    
+    i++;
+  }
 }
 
 function badgesDoWhile() {
   // TODO: lo mismo que badgesFor(), con un do…while.
+  
+  const veces = leerNumero("numero1");
+  limpiarSalida();
+
+  // Validación: si falta (isNaN), tiene decimales o pasa de MAXIMO_REPETICIONES
+  if (isNaN(veces) || !Number.isInteger(veces) || veces > MAXIMO_REPETICIONES) {
+    mostrar("Error: número inválido, con decimales o superior al máximo permitido.", "danger");
+    return;
+  }
+
+  let i = 1;
+
+  // Bucle do…while que se ejecuta al menos una vez antes de comprobar la condición
+  do {
+    // Usamos el operador ternario para elegir el color: pares de un color, impares de otro
+    const color = (i % 2 === 0) ? "primary" : "secondary";
+    
+    // Añade el badge con el número de la repetición y el color correspondiente
+    anadirBadge(i, color);
+    
+    i++;
+  } while (i <= veces);
 }
