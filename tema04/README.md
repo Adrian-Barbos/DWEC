@@ -42,7 +42,6 @@ Los bucles for y while evalúan su condición antes de cada iteración, por lo q
 
 ## Fuentes
 
-- [Título de la página](https://enlace-a-la-fuente)
 - Gemini
 - Los PDF de la asignatura
 
