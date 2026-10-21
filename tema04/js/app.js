@@ -186,11 +186,54 @@ function bucleFor() {
 
 
 function bucleWhile() {
-  // TODO: lo mismo que bucleFor(), con un while.
+  const veces = leerNumero("numero1");
+  limpiarSalida();
+
+  // Validación: si falta (isNaN), tiene decimales o pasa de MAXIMO_REPETICIONES
+  if (isNaN(veces) || !Number.isInteger(veces) || veces > MAXIMO_REPETICIONES) {
+    mostrar("Error: número inválido, con decimales o superior al máximo permitido.", "danger");
+    return;
+  }
+
+  let contador = 0;
+  let i = 1;
+
+  // Bucle while
+  while (i <= veces) {
+    anadirLinea(`while · repetición ${i} de ${veces}`);
+    contador++;
+    i++;
+  }
+
+  // Total con manejo correcto de singular y plural
+  const textoTotal = contador === 1 ? "1 repetición" : `${contador} repeticiones`;
+  anadirLinea(`Total: ${textoTotal}`);
 }
 
 function bucleDoWhile() {
   // TODO: lo mismo que bucleFor(), con un do…while. Pruébalo con 0 y con un negativo: ¿qué pasa?
+  const veces = leerNumero("numero1");
+  limpiarSalida();
+
+  // Validación: si falta (isNaN), tiene decimales o pasa de MAXIMO_REPETICIONES
+  if (isNaN(veces) || !Number.isInteger(veces) || veces > MAXIMO_REPETICIONES) {
+    mostrar("Error: número inválido, con decimales o superior al máximo permitido.", "danger");
+    return;
+  }
+
+  let contador = 0;
+  let i = 1;
+
+  // Bucle do…while
+  do {
+    anadirLinea(`do…while · repetición ${i} de ${veces}`);
+    contador++;
+    i++;
+  } while (i <= veces);
+
+  // Total con manejo correcto de singular y plural
+  const textoTotal = contador === 1 ? "1 repetición" : `${contador} repeticiones`;
+  anadirLinea(`Total: ${textoTotal}`);
 }
 
 
