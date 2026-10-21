@@ -141,6 +141,17 @@ function cualEsMayor() {
 function parOImpar() {
   // TODO: solo con el número 1. Usa el operador % y el ternario ( condición ? "par" : "impar" ).
   // TODO: si el número tiene decimales, avisa de que no es ni par ni impar.
+  
+  const n1 = leerNumero("numero1");
+  
+  // Si el número tiene decimales, avisa de que no es ni par ni impar
+  if (!Number.isInteger(n1)) {
+    return "No es ni par ni impar (tiene decimales)";
+  }
+  
+  // Usa % para saber si es par y el ternario para elegir la palabra
+  return (n1 % 2 === 0) ? "par" : "impar";
+
 }
 
 
@@ -158,6 +169,7 @@ function bucleFor() {
   //         anadirLinea(`for · repetición ${i} de ${veces}`);
   //       y cuenta las vueltas en una variable contador.
   // TODO: al terminar, añade una línea con el total: «Total: 5 repeticiones» o «Total: 1 repetición».
+
 }
 
 function bucleWhile() {
