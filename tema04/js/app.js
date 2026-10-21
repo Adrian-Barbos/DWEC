@@ -164,13 +164,26 @@ function bucleFor() {
   const veces = leerNumero("numero1");
   limpiarSalida();
 
-  // TODO: si el número falta, tiene decimales o pasa de MAXIMO_REPETICIONES, muestra un error en rojo.
-  // TODO: si no, repite con un for tantas veces como diga «veces». En cada vuelta:
-  //         anadirLinea(`for · repetición ${i} de ${veces}`);
-  //       y cuenta las vueltas en una variable contador.
-  // TODO: al terminar, añade una línea con el total: «Total: 5 repeticiones» o «Total: 1 repetición».
+  // Validación: si falta (isNaN), tiene decimales o pasa de MAXIMO_REPETICIONES
+  if (isNaN(veces) || !Number.isInteger(veces) || veces > MAXIMO_REPETICIONES) {
+    mostrar("Error: número inválido, con decimales o superior al máximo permitido.", "danger");
+    return;
+  }
 
+  let contador = 0;
+
+  // Bucle for
+  for (let i = 1; i <= veces; i++) {
+    anadirLinea(`for · repetición ${i} de ${veces}`);
+    contador++;
+  }
+
+  // Total con manejo correcto de singular y plural
+  const textoTotal = contador === 1 ? "1 repetición" : `${contador} repeticiones`;
+  anadirLinea(`Total: ${textoTotal}`);
 }
+
+
 
 function bucleWhile() {
   // TODO: lo mismo que bucleFor(), con un while.
