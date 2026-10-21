@@ -1,15 +1,3 @@
-/*
-  Tarea 4 · DWEC · Adrián Barbos
-  Calculadora y bucles.
-
-  Cómo usar esta plantilla:
-  · Hay una función por botón. Cada una se ejecuta al pulsar su botón de index.html.
-  · sumar() está hecha: es el modelo. Escribe las demás donde pone TODO y, cuando termines, borra el TODO.
-  · Para leer las casillas y escribir el resultado usa las funciones de js/ayudas.js:
-      leerNumero("numero1"), mostrar(texto, color), anadirLinea(texto), anadirBadge(texto, color), limpiarSalida()
-  · Además de en la página, cada función deja su rastro en la consola con console.log().
-  · let y const, nunca var. Compara siempre con ===. Comillas rectas.
-*/
 
 console.log("app.js cargado");
 
@@ -36,7 +24,7 @@ function sumar() {
 }
 
 function restar() {
-  // TODO: como sumar(), con el operador -
+  
   const n1 = leerNumero("numero1");
   const n2 = leerNumero("numero2");
 
@@ -51,7 +39,7 @@ function restar() {
 }
 
 function multiplicar() {
-  // TODO: como sumar(), con el operador *
+ 
   const n1 = leerNumero("numero1");
   const n2 = leerNumero("numero2");
 
@@ -66,8 +54,7 @@ function multiplicar() {
 }
 
 function dividir() {
-  // TODO: como sumar(), con el operador /
-  // TODO: si el número 2 es 0, muestra un error en rojo. Ojo: en JavaScript, 5 / 0 no da error, da Infinity.
+ 
   const n1 = leerNumero("numero1");
   const n2 = leerNumero("numero2");
 
@@ -83,7 +70,7 @@ function dividir() {
 }
 
 function potencia() {
-  // TODO: como sumar(), con el operador **
+  
   const n1 = leerNumero("numero1");
   const n2 = leerNumero("numero2");
 
@@ -98,8 +85,7 @@ function potencia() {
 }
 
 function modulo() {
-  // TODO: el resto de la división, con el operador %
-  // TODO: si el número 2 es 0, muestra un error en rojo (5 % 0 da NaN).
+  
   const n1 = leerNumero("numero1");
   const n2 = leerNumero("numero2");
 
@@ -119,7 +105,7 @@ function modulo() {
 // ============================================================
 
 function cualEsMayor() {
-  // TODO: con if, else if y else, di cuál de los dos números es mayor o si son iguales.
+  
   const n1 = leerNumero("numero1");
   const n2 = leerNumero("numero2");
   if (Number.isNaN(n1) || Number.isNaN(n2)) {
@@ -139,8 +125,7 @@ function cualEsMayor() {
 }
 
 function parOImpar() {
-  // TODO: solo con el número 1. Usa el operador % y el ternario ( condición ? "par" : "impar" ).
-  // TODO: si el número tiene decimales, avisa de que no es ni par ni impar.
+  
   
   const n1 = leerNumero("numero1");
   
@@ -211,7 +196,7 @@ function bucleWhile() {
 }
 
 function bucleDoWhile() {
-  // TODO: lo mismo que bucleFor(), con un do…while. Pruébalo con 0 y con un negativo: ¿qué pasa?
+  
   const veces = leerNumero("numero1");
   limpiarSalida();
 
@@ -263,7 +248,7 @@ function badgesFor() {
 }
 
 function badgesWhile() {
-  // TODO: lo mismo que badgesFor(), con un while.
+  
 
   const veces = leerNumero("numero1");
   limpiarSalida();
@@ -289,7 +274,7 @@ function badgesWhile() {
 }
 
 function badgesDoWhile() {
-  // TODO: lo mismo que badgesFor(), con un do…while.
+  
 
   const veces = leerNumero("numero1");
   limpiarSalida();
