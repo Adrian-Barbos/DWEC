@@ -93,15 +93,34 @@
     <!-- TODO EJERCICIOS 3 Y 4 · Bucles: una card con dos grupos de botones (btn-group)
                Con texto:  for → bucleFor()    while → bucleWhile()    do…while → bucleDoWhile()
                Con badges: for → badgesFor()   while → badgesWhile()   do…while → badgesDoWhile() -->
-
+    
+    <!-- EJERCICIO 3 Y 4-->
      <section class="card mb-4">
-      <div class="card-header">Bucles con texto</div>
-      <div class="card-body">
+  <div class="card-header">Bucles (Texto y Badges)</div>
+  <div class="card-body">
+    
+    <!-- EJERCICIO 3: Bucles con texto -->
+    <div class="mb-3">
+      <p class="text-muted mb-2">Bucles con texto:</p>
+      <div class="btn-group" role="group" aria-label="Bucles con texto">
         <button type="button" class="btn btn-primary" onclick="bucleFor()">for</button>
         <button type="button" class="btn btn-danger" onclick="bucleWhile()">while</button>
         <button type="button" class="btn btn-warning" onclick="bucleDoWhile()">do…while</button>
       </div>
-    </section>
+    </div>
+
+    <!-- EJERCICIO 4: Bucles con badges -->
+    <div>
+      <p class="text-muted mb-2">Bucles con badges:</p>
+      <div class="btn-group" role="group" aria-label="Bucles con badges">
+        <button type="button" class="btn btn-primary" onclick="badgesFor()">for</button>
+        <button type="button" class="btn btn-danger" onclick="badgesWhile()">while</button>
+        <button type="button" class="btn btn-warning" onclick="badgesDoWhile()">do…while</button>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   </main>
 
