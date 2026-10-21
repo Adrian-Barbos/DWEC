@@ -1,5 +1,5 @@
 /*
-  Tarea 4 · DWEC · [Tu nombre y apellidos]
+  Tarea 4 · DWEC · Adrián Barbos
   Calculadora y bucles.
 
   Cómo usar esta plantilla:
@@ -290,7 +290,7 @@ function badgesWhile() {
 
 function badgesDoWhile() {
   // TODO: lo mismo que badgesFor(), con un do…while.
-  
+
   const veces = leerNumero("numero1");
   limpiarSalida();
 
