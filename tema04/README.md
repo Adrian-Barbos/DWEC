@@ -1,6 +1,6 @@
 # Tarea 4 · Calculadora y bucles
 
-**Autor:** [Tu nombre y apellidos] · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
+**Autor:** Adrián Barbos · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
 
 > **Plantilla de la tarea 4.** Cómo usarla:
 >
@@ -11,7 +11,7 @@
 > 5. Sustituye las imágenes de `capturas/` por las tuyas, **con el mismo nombre**.
 > 6. Todo lo que va entre [corchetes] es un hueco: cámbialo por lo tuyo. Al terminar, borra este aviso.
 
-[Una o dos líneas: qué hay en esta carpeta y cómo se ve. Por ejemplo: abrir la carpeta en VS Code, pulsar **Go Live**, escribir dos números y pulsar los botones con la consola abierta (F12).]
+Contiene la aplicación web interactiva de calculadora y bucles desarrollada con Bootstrap y JavaScript. Para probarla, abre la carpeta en VS Code, inicia el servidor con Go Live, introduce dos números en los campos de entrada y haz clic en los botones de las operaciones o bucles.
 
 ## Capturas
 
@@ -19,40 +19,42 @@
 
 <img src="capturas/a-pagina.png" alt="La página entera con mi nombre en la navbar" width="600">
 
-[Qué se ve: tu nombre en la navbar y cómo has repartido las cards con la rejilla.]
+Qué se ve: Se muestra el nombre del autor en la navbar y la interfaz organizada en dos columnas mediante Bootstrap: datos y resultados a la izquierda, y las secciones de acciones a la derecha.
 
 ### b) La página en el móvil
 
 <img src="capturas/b-movil.png" alt="La página en el modo móvil de las herramientas de desarrollo" width="300">
 
-[Qué cambia respecto a la pantalla grande.]
+Las columnas se apilan verticalmente adaptándose a pantallas pequeñas.
 
 ### c) El error de dividir entre 0
 
 ![El error de dividir entre 0 con la consola abierta](capturas/c-dividir-cero.png)
 
-[Qué se ve en la página y en la consola.]
+Se observa que al dividir entre 0 la aplicación muestra el valor Infinity en la caja de resultados, con la consola limpia y sin errores de ejecución.
 
 ### d) Los tres bucles con el número 0
 
 ![Los tres bucles de texto con el número 0 y la consola abierta](capturas/d-bucles-cero.png)
 
-[Cuántas veces se repite cada bucle y por qué.]
+El bucle for y el while no se ejecutan (0 repeticiones) porque la condición es falsa desde el inicio. El do...while se ejecuta exactamente 1 vez porque evalúa la condición al final.
 
 ### e) Un bucle con badges
 
 ![Un bucle con badges](capturas/e-badges.png)
 
-[Qué número has puesto y cómo eliges el color de cada badge.]
+Se ha introducido el número 17 y el color de cada badge se alterna dinámicamente mediante operadores ternarios (pares de un color e impares de otro).
 
 ## Reflexión
 
-[De 5 a 8 líneas: ¿en qué se diferencian for, while y do…while y cuándo usarías cada uno? Pon como ejemplo lo que pasó con el 0.]
+Los bucles for y while evalúan su condición antes de cada iteración, por lo que al introducir un 0 no llegan a ejecutarse ninguna vez. En contraste, el bucle do...while comprueba la condición al final, lo que garantiza que el bloque de código se ejecute siempre al menos una vez, mostrando una repetición incluso con el 0. Usaremos for cuando sepamos el número exacto de repeticiones, while cuando el bucle dependa de una condición previa, y do...while cuando sea obligatorio realizar la acción antes de validar si se debe repetir.
 
 ## Fuentes
 
 - [Título de la página](https://enlace-a-la-fuente)
+- Gemini
+- Los PDF de la asignatura
 
 ## Uso de IA
 
-[Si has usado IA: qué herramienta, para qué y qué hiciste después con su respuesta. Si no la has usado, borra este apartado.]
+He usado IA para algunas cosas del README.md, para que me ordene también algunas cosas de bootstrap y con algunas dudas que he tenido en algún apartado.
