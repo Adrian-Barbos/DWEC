@@ -88,7 +88,7 @@ function activarResaltado() {
 
   }
 
-  // TODO: un console.log() que diga en cuántos párrafos se ha activado (parrafos.length).
+  //Console.log() que diga en cuántos párrafos se ha activado (parrafos.length).
     console.log(" Se han activado " + parrafos.length + " parrafos");
 }
 
@@ -98,14 +98,34 @@ function activarResaltado() {
 // ============================================================
 
 function cambiarTexto() {
-  // TODO: lee lo escrito en #nuevoTexto con value y quítale los espacios de los extremos con trim().
-  // TODO: si está vacío, muestra el error #error4 (quítale "d-none") y no cambies nada.
+  
+  //Lee lo escrito en #nuevoTexto con value y quita los espacios de los extremos con trim().
+  const texto = document.querySelector("#nuevoTexto").value.trim();
+
+  //Si está vacío, muestra el error #error4 (quítale "d-none") y no cambies nada.
+  if (texto === "") {
+    document.querySelector("#error4").classList.remove("d-none");
+  } else { 
+
   // TODO: si no, pon ese texto en el primer párrafo de #contenido con textContent y oculta el error.
+    document.querySelector("#error4").classList.add("d-none"); 
+    document.querySelector("#contenido p").textContent= texto;
+    }
 }
 
 function cambiarConHtml() {
-  // TODO: lo mismo que cambiarTexto(), pero con innerHTML.
-  //       Prueba las dos con <b>hola</b> y explica en el README qué diferencia ves y por qué es peligroso.
+
+  // 1. Lee lo escrito en #nuevoTexto con value y quítale los espacios con trim()[cite: 5]
+  const texto = document.querySelector("#nuevoTexto").value.trim();
+
+  // 2. Si está vacío, muestra el error #error4 quitándole "d-none"[cite: 5]
+  if (texto === "") {
+    document.querySelector("#error4").classList.remove("d-none");
+  } else { 
+    // 3. Si no está vacío, oculta el error y usa innerHTML en el primer párrafo[cite: 5, 20]
+    document.querySelector("#error4").classList.add("d-none"); 
+    document.querySelector("#contenido p").innerHTML = texto;
+  }
 }
 
 
