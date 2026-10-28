@@ -166,7 +166,7 @@ function borrarCompletadas() {
   if (selecciona_casillas === "0") {
     document.querySelector("#error5");
   } else {
-    for (const casilla of casillasMarcadas) {
+    for (const casilla of selecciona_casillas) {
       casilla.parentElement.remove();
     }
   }
