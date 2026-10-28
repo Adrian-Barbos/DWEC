@@ -98,7 +98,7 @@ function activarResaltado() {
 // ============================================================
 
 function cambiarTexto() {
-  
+  console.log("Ejecución de la función cambiarTexto");
   //Lee lo escrito en #nuevoTexto con value y quita los espacios de los extremos con trim().
   const texto = document.querySelector("#nuevoTexto").value.trim();
 
@@ -107,22 +107,22 @@ function cambiarTexto() {
     document.querySelector("#error4").classList.remove("d-none");
   } else { 
 
-  // TODO: si no, pon ese texto en el primer párrafo de #contenido con textContent y oculta el error.
+  //Si no, pon ese texto en el primer párrafo de #contenido con textContent y oculta el error.
     document.querySelector("#error4").classList.add("d-none"); 
     document.querySelector("#contenido p").textContent= texto;
     }
 }
 
 function cambiarConHtml() {
-
-  // 1. Lee lo escrito en #nuevoTexto con value y quítale los espacios con trim()[cite: 5]
+  console.log("Ejecución de la función cambiarConHtml");
+  // 1. Lee lo escrito en #nuevoTexto con value y quítale los espacios con trim()
   const texto = document.querySelector("#nuevoTexto").value.trim();
-
-  // 2. Si está vacío, muestra el error #error4 quitándole "d-none"[cite: 5]
+  
+  // 2. Si está vacío, muestra el error #error4 quitándole "d-none"
   if (texto === "") {
     document.querySelector("#error4").classList.remove("d-none");
   } else { 
-    // 3. Si no está vacío, oculta el error y usa innerHTML en el primer párrafo[cite: 5, 20]
+    // 3. Si no está vacío, oculta el error y usa innerHTML en el primer párrafo
     document.querySelector("#error4").classList.add("d-none"); 
     document.querySelector("#contenido p").innerHTML = texto;
   }
@@ -134,19 +134,56 @@ function cambiarConHtml() {
 // ============================================================
 
 function anadirTarea() {
+  console.log("Ejecución de la función anadirTarea");
+  
   // TODO: lee el texto de #tareaInput (value + trim). Si está vacío, muestra un mensaje en #error5.
-  // TODO: si no, crea un <li class="list-group-item"> con dos elementos dentro:
-  //         · un <input> de tipo "checkbox" con la clase "form-check-input",
-  //         · un <span> con el texto de la tarea (textContent).
-  //       Cuelga el <li> de #listaTareas y vacía la casilla (value = "").
+  const texto = document.querySelector("#tareaInput").value.trim();
+
+  if (texto === "") {
+    document.querySelector("#error5").textContent = "Introduce una tarea";
+  } else {
+    // TODO: si no, crea un <li class="list-group-item"> con dos elementos dentro:
+    //         · un <input> de tipo "checkbox" con la clase "form-check-input",
+    //         · un <span> con el texto de la tarea (textContent).
+    //       Cuelga el <li> de #listaTareas y vacía la casilla (value = "").
+    const li = document.createElement("li");
+    li.className = "list-group-item";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "form-check-input";
+
+    const span = document.createElement("span");
+    span.textContent = texto;
+
+    li.appendChild(checkbox);
+    li.appendChild(span);
+
+    document.querySelector("#listaTareas").appendChild(li);
+    document.querySelector("#tareaInput").value = "";
+  }
+
   // TODO: actualiza #totalTareas con el número de <li> que hay en la lista.
+  const total = document.querySelectorAll("#listaTareas li").length;
+  document.querySelector("#totalTareas").textContent = total;
 }
 
 function borrarCompletadas() {
-  // TODO: selecciona las casillas marcadas: document.querySelectorAll("#listaTareas input:checked").
-  // TODO: si no hay ninguna, avisa en #error5. Si hay, recórrelas con for…of y borra el <li> de cada una
-  //       (el <li> es el padre de la casilla: parentElement).
+  console.log("Ejecución de la función borrarCompletadas");
+
+  const selecciona_casillas = document.querySelectorAll("#listaTareas input:checked" );
+
+  if (selecciona_casillas === "0") {
+    document.querySelector("#error5");
+  } else {
+    for (const casilla of casillasMarcadas) {
+      casilla.parentElement.remove();
+    }
+  }
+
   // TODO: actualiza #totalTareas.
+  const total = document.querySelectorAll("#listaTareas li").length;
+  document.querySelector("#totalTareas").textContent = total;
 }
 
 
