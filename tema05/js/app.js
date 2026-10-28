@@ -171,7 +171,7 @@ function anadirTarea() {
 function borrarCompletadas() {
   console.log("Ejecución de la función borrarCompletadas");
 
-  const selecciona_casillas = document.querySelectorAll("#listaTareas input:checked" );
+  const selecciona_casillas = document.querySelectorAll("#listaTareas input:checked");
 
   if (selecciona_casillas === "0") {
     document.querySelector("#error5");
@@ -192,6 +192,8 @@ function borrarCompletadas() {
 // ============================================================
 
 function verDatosVentana() {
+  console.log("Ejecución de la función verDatosVentana");
+
   // El modelo: el tamaño de la ventana
   const ancho = window.innerWidth;
   const alto = window.innerHeight;
@@ -199,6 +201,26 @@ function verDatosVentana() {
 
   // TODO: con if / else if, el punto de corte de Bootstrap según el ancho: xs (< 576), sm (≥ 576), md (≥ 768),
   //       lg (≥ 992), xl (≥ 1200) y xxl (≥ 1400). Escríbelo en #datoPunto.
+  let puntoCorte = "";
+  if (ancho >= 1400) {
+    puntoCorte = "xxl (≥ 1400 px)";
+  } else if (ancho >= 1200) {
+    puntoCorte = "xl (≥ 1200 px)";
+  } else if (ancho >= 992) {
+    puntoCorte = "lg (≥ 992 px)";
+  } else if (ancho >= 768) {
+    puntoCorte = "md (≥ 768 px)";
+  } else if (ancho >= 576) {
+    puntoCorte = "sm (≥ 576 px)";
+  } else {
+    puntoCorte = "xs (< 576 px)";
+  }
+  document.querySelector("#datoPunto").textContent = puntoCorte;
+
   // TODO: el tamaño de la pantalla (screen.width y screen.height) en #datoPantalla.
+  document.querySelector("#datoPantalla").textContent = `${screen.width} × ${screen.height} px`;
+
   // TODO: la URL (location.href) en #datoUrl y el idioma del navegador (navigator.language) en #datoIdioma.
+  document.querySelector("#datoUrl").textContent = location.href;
+  document.querySelector("#datoIdioma").textContent = navigator.language;
 }
