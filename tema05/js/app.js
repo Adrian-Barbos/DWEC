@@ -41,7 +41,7 @@ function aplicarCambios() {
 // ============================================================
 
 function anadirParrafo() {
-  
+  console.log("Ejecución de la función anadirParrafo");
   // 1. Crea un <p> con document.createElement()
   var para = document.createElement("p");
   
@@ -55,15 +55,14 @@ function anadirParrafo() {
 }
 
 function eliminarUltimo() {
-
-  const eliminar_ultimo = document.querySelector("#contenido").lastElementChild;
+  console.log("Ejecución de la función eliminarUltimo");
+  const ultimo = document.querySelector("#contenido").lastElementChild;
 
   if (ultimo === null) {
     document.querySelector("#aviso2").classList.remove("d-none");
-  }  else {
+  } else {
     ultimo.remove();
   }
-
 }
 
 
