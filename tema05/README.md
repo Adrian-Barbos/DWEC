@@ -1,6 +1,6 @@
 # Tarea 5 · Manipular el DOM
 
-**Autor:** [Tu nombre y apellidos] · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
+**Autor:** Adrián Barbos · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
 
 > **Plantilla de la tarea 5.** Cómo usarla:
 >
@@ -56,7 +56,8 @@
 
 ## Fuentes
 
-- [Título de la página](https://enlace-a-la-fuente)
+- PDF Tema 5
+- Tema 05 v2 Los objetos de lenguaje
 
 ## Uso de IA
 
