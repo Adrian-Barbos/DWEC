@@ -99,6 +99,20 @@ function modulo() {
   }
 }
 
+function media() {
+  const n1 = leerNumero("numero1");
+  const n2 = leerNumero("numero2");
+
+  if (Number.isNaN(n1) || Number.isNaN(n2)) {
+    mostrar("Escribe los dos números antes de operar.", "danger");
+    console.warn("Media: falta algún número");
+  } else {
+    const resultado = (n1 + n2) / 2;
+    mostrar(`La media de ${n1} y ${n2} es ${resultado}`);
+    console.log(`Media: (${n1} + ${n2}) / 2 = ${resultado}`);
+  }
+}
+
 
 // ============================================================
 // Ejercicio 2 · Comparaciones
@@ -125,18 +139,20 @@ function cualEsMayor() {
 }
 
 function parOImpar() {
-  
-  
   const n1 = leerNumero("numero1");
   
-  // Si el número tiene decimales, avisa de que no es ni par ni impar
+  // Validación de decimales
   if (!Number.isInteger(n1)) {
-    return "No es ni par ni impar (tiene decimales)";
+    const mensaje = "No es ni par ni impar (tiene decimales)";
+    console.warn(`Par o Impar: ${mensaje}`); // O console.log
+    return mensaje;
   }
   
-  // Usa % para saber si es par y el ternario para elegir la palabra
-  return (n1 % 2 === 0) ? "par" : "impar";
-
+  // Cálculo de par o impar
+  const resultado = (n1 % 2 === 0) ? "par" : "impar";
+  
+  console.log(`El número ${n1} es ${resultado}`);
+  return resultado;
 }
 
 
@@ -167,7 +183,6 @@ function bucleFor() {
   const textoTotal = contador === 1 ? "1 repetición" : `${contador} repeticiones`;
   anadirLinea(`Total: ${textoTotal}`);
 }
-
 
 
 function bucleWhile() {
@@ -298,3 +313,4 @@ function badgesDoWhile() {
     i++;
   } while (i <= veces);
 }
+
