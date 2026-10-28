@@ -2,15 +2,6 @@
 
 **Autor:** Adrián Barbos · Desarrollo Web en Entorno Cliente (DWEC) · 2.º DAW · Curso 2026-27
 
-> **Plantilla de la tarea 5.** Cómo usarla:
->
-> 1. Copia esta carpeta en tu repositorio de DWEC y cámbiale el nombre a `tema05`.
-> 2. `index.html` ya está maquetado: es la página que vas a manipular. No cambies los `id` ni las clases que usa el JavaScript.
-> 3. `js/app.js` trae una función por botón con `TODO`, y modelos en los ejercicios 1, 3 y 6.
-> 4. Sustituye las imágenes de `capturas/` por las tuyas, **con el mismo nombre**.
-> 5. Todo lo que va entre [corchetes] es un hueco: cámbialo por lo tuyo. Al terminar, borra este aviso.
-
-[Una o dos líneas: qué hay en esta carpeta y cómo se ve. Por ejemplo: abrir la carpeta en VS Code, pulsar **Go Live** y probar los botones con la consola abierta (F12).]
 En esta carpeta tema05 está, la carpeta de las capturas, la carpeta de js con el app.js dentro que es donde he tenido que trabajar en toda la práctica y finalmente el index. Al hacer clic derecho sobre el index.html y darle show preview aparece la web. Con f12 podemos ver que al pulsar un botón en la consola aparece "ejecución de la función" y el nombre de la función.
 ## Capturas
 
