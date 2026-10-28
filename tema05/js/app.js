@@ -75,16 +75,21 @@ function activarResaltado() {
   const parrafos = document.querySelectorAll("#contenido p");
 
   for (const parrafo of parrafos) {
+
     // addEventListener("mouseenter", ...) ejecuta la función cuando el ratón entra en el párrafo.
-    // Los eventos los veremos a fondo en el tema 9: de momento, copia este modelo.
     parrafo.addEventListener("mouseenter", function () {
       parrafo.classList.add("bg-body-secondary");
     });
 
-    // TODO: lo mismo con "mouseleave" (cuando el ratón sale) para quitar la clase.
+    //Lo mismo con "mouseleave" (cuando el ratón sale) para quitar la clase.
+    parrafo.addEventListener("mouseleave", function () {
+      parrafo.classList.remove("bg-body-secondary");
+    });
+
   }
 
   // TODO: un console.log() que diga en cuántos párrafos se ha activado (parrafos.length).
+    console.log(" Se han activado " + parrafos.length + " parrafos");
 }
 
 
