@@ -130,12 +130,9 @@ function anadirTarea() {
   const texto = document.querySelector("#tareaInput").value.trim();
 
   if (texto === "") {
-    document.querySelector("#error5").textContent = "Introduce una tarea";
+    document.querySelector("#error5").classList.remove("d-none");
   } else {
-    //S i no, crea un <li class="list-group-item"> con dos elementos dentro:
-    //         · un <input> de tipo "checkbox" con la clase "form-check-input",
-    //         · un <span> con el texto de la tarea (textContent).
-    //       Cuelga el <li> de #listaTareas y vacía la casilla (value = "").
+    
     const li = document.createElement("li");
     li.className = "list-group-item";
 
