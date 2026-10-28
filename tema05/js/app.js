@@ -1,15 +1,6 @@
 /*
-  Tarea 5 · DWEC · [Tu nombre y apellidos]
+  Tarea 5 · DWEC · Adrián Barbos
   Manipular el DOM.
-
-  Cómo usar esta plantilla:
-  · Desde este tema, el JavaScript escribe en la página: selecciona elementos y cambia su texto, sus clases...
-  · Hay una función por botón. Escribe tu código donde pone TODO y, cuando termines, borra el TODO.
-  · app.js se carga en el <head> con defer: cuando se ejecuta, el HTML ya está leído.
-  · Selecciona con document.querySelector() / querySelectorAll() (o getElementById).
-  · Texto con textContent; aspecto con classList y las clases de Bootstrap (no con style).
-  · Cada función deja también su rastro en la consola con console.log().
-  · let y const, nunca var. Compara siempre con ===. Comillas rectas.
 */
 
 console.log("app.js cargado");
@@ -135,13 +126,13 @@ function cambiarConHtml() {
 function anadirTarea() {
   console.log("Ejecución de la función anadirTarea");
   
-  // TODO: lee el texto de #tareaInput (value + trim). Si está vacío, muestra un mensaje en #error5.
+  //Lee el texto de #tareaInput (value + trim). Si está vacío, muestra un mensaje en #error5.
   const texto = document.querySelector("#tareaInput").value.trim();
 
   if (texto === "") {
     document.querySelector("#error5").textContent = "Introduce una tarea";
   } else {
-    // TODO: si no, crea un <li class="list-group-item"> con dos elementos dentro:
+    //S i no, crea un <li class="list-group-item"> con dos elementos dentro:
     //         · un <input> de tipo "checkbox" con la clase "form-check-input",
     //         · un <span> con el texto de la tarea (textContent).
     //       Cuelga el <li> de #listaTareas y vacía la casilla (value = "").
@@ -162,7 +153,7 @@ function anadirTarea() {
     document.querySelector("#tareaInput").value = "";
   }
 
-  // TODO: actualiza #totalTareas con el número de <li> que hay en la lista.
+  //Actualiza #totalTareas con el número de <li> que hay en la lista.
   const total = document.querySelectorAll("#listaTareas li").length;
   document.querySelector("#totalTareas").textContent = total;
 }
@@ -180,7 +171,7 @@ function borrarCompletadas() {
     }
   }
 
-  // TODO: actualiza #totalTareas.
+  //Actualiza #totalTareas.
   const total = document.querySelectorAll("#listaTareas li").length;
   document.querySelector("#totalTareas").textContent = total;
 }
@@ -198,8 +189,6 @@ function verDatosVentana() {
   const alto = window.innerHeight;
   document.querySelector("#datoVentana").textContent = `${ancho} × ${alto} px`;
 
-  // TODO: con if / else if, el punto de corte de Bootstrap según el ancho: xs (< 576), sm (≥ 576), md (≥ 768),
-  //       lg (≥ 992), xl (≥ 1200) y xxl (≥ 1400). Escríbelo en #datoPunto.
   let puntoCorte = "";
   if (ancho >= 1400) {
     puntoCorte = "xxl (≥ 1400 px)";
@@ -216,10 +205,10 @@ function verDatosVentana() {
   }
   document.querySelector("#datoPunto").textContent = puntoCorte;
 
-  // TODO: el tamaño de la pantalla (screen.width y screen.height) en #datoPantalla.
-  document.querySelector("#datoPantalla").textContent = `${screen.width} × ${screen.height} px`;
+  //El tamaño de la pantalla (screen.width y screen.height) en #datoPantalla.
+  document.querySelector("#datoPantalla").textContent = `${screen.width} x ${screen.height} px`;
 
-  // TODO: la URL (location.href) en #datoUrl y el idioma del navegador (navigator.language) en #datoIdioma.
+  //La URL (location.href) en #datoUrl y el idioma del navegador (navigator.language) en #datoIdioma.
   document.querySelector("#datoUrl").textContent = location.href;
   document.querySelector("#datoIdioma").textContent = navigator.language;
 }
