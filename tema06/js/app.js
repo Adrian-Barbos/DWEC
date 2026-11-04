@@ -1,5 +1,5 @@
 /*
-  Tarea 6 · DWEC · [Tu nombre y apellidos]
+  Tarea 6 · DWEC · Adrián Barbos
   Objetos y arrays.
 
   Cómo usar esta plantilla:
@@ -35,23 +35,66 @@ function comoTexto(lista) {
 // TODO: añádele el método presentarse(), que devuelve una frase con this.nombre, this.apellidos, this.edad y this.curso.
 //       Por ejemplo: «Soy [nombre] [apellidos], tengo [edad] años y estudio [curso].»
 const estudiante = {
-
+  nombre: "Adrian",
+  apellidos: "Barbos",
+  edad: 19,
+  curso: "DAW",
+  presentarse: function() {
+  return `Soy  ${this.nombre} ${this.apellidos}, tengo ${this.edad} años y estudio ${this.curso}.`;
+}
 };
 
+
 function verFicha() {
-  // TODO: vacía #salida1 (textContent = "").
-  // TODO: crea un <ul class="list-group"> con un <li class="list-group-item"> por propiedad: «nombre: ...», «edad: ...».
-  //       Pista: guarda las claves en un array, ["nombre", "apellidos", "edad", "curso"], recórrelo con forEach
-  //       y lee cada valor con corchetes: estudiante[clave].
-  // TODO: debajo, un <p> con la frase de estudiante.presentarse().
-  // TODO: console.log() del objeto entero.
+  const salida = document.getElementById('salida1');
+  
+  // 1. Vaciar #salida1 usando textContent
+  salida.textContent = '';
+
+  // 2. Crear el elemento <ul> y asignarle la clase
+  const ul = document.createElement('ul');
+  ul.className = 'list-group';
+
+  // Array de claves
+  const claves = ["nombre", "apellidos", "edad", "curso"];
+
+  claves.forEach(function(clave) {
+    
+    // Crear cada <li> y su clase
+    const li = document.createElement('li');
+    li.className = 'list-group-item';
+    
+    
+    li.textContent = `${clave}: ${estudiante[clave]}`;
+    
+    // Meter el <li> dentro del <ul>
+    ul.appendChild(li);
+  });
+
+  // Añadir el <ul> ya completo a #salida1
+  salida.appendChild(ul);
+
+  // 3. Crear el <p> con la frase de presentarse()
+  const p = document.createElement('p');
+  p.className = 'mt-3';
+  p.textContent = estudiante.presentarse();
+
+  // Añadir el <p> debajo del <ul> en #salida1
+  salida.appendChild(p);
+
+  // 4. console.log() del objeto entero
+  console.log(estudiante);
 }
 
 function cumplirAnios() {
   // TODO: suma 1 a la edad del estudiante y vuelve a pintar la ficha (llama a verFicha()).
+  estudiante.edad++;
+  verFicha();
 }
 
 function quitarCurso() {
+  delete estudiante.curso;
+  verFicha();
   // TODO: borra la propiedad curso con delete y vuelve a pintar la ficha.
   //       Fíjate en lo que sale ahora en el curso y explícalo en el README.
 }
