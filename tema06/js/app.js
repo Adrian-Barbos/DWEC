@@ -31,9 +31,6 @@ function comoTexto(lista) {
 // Ejercicio 1 · Ficha de estudiante
 // ============================================================
 
-// TODO: completa el objeto literal con tus datos: nombre, apellidos, edad y curso.
-// TODO: añádele el método presentarse(), que devuelve una frase con this.nombre, this.apellidos, this.edad y this.curso.
-//       Por ejemplo: «Soy [nombre] [apellidos], tengo [edad] años y estudio [curso].»
 const estudiante = {
   nombre: "Adrian",
   apellidos: "Barbos",
@@ -87,7 +84,7 @@ function verFicha() {
 }
 
 function cumplirAnios() {
-  // TODO: suma 1 a la edad del estudiante y vuelve a pintar la ficha (llama a verFicha()).
+  //Suma 1 a la edad del estudiante y vuelve a pintar la ficha (llama a verFicha()).
   estudiante.edad++;
   verFicha();
 }
@@ -95,8 +92,6 @@ function cumplirAnios() {
 function quitarCurso() {
   delete estudiante.curso;
   verFicha();
-  // TODO: borra la propiedad curso con delete y vuelve a pintar la ficha.
-  //       Fíjate en lo que sale ahora en el curso y explícalo en el README.
 }
 
 
@@ -144,15 +139,30 @@ function anadirColor() {
 }
 
 function quitarUltimo() {
-  // TODO: si la lista está vacía, avisa con avisar2() y no hagas nada más.
-  // TODO: si no, saca el último con pop(), vuelve a pintar la lista y di en la consola qué color ha salido.
+  if (colores.length === 0) {
+    avisar2();
+  } else {
+    const colorEliminado = colores.pop();
+
+    mostrarColores();
+
+    console.log("Ha salido el color:" , colorEliminado);
+  }
 }
 
 function quitarPrimero() {
-  // TODO: lo mismo que quitarUltimo(), pero sacando el primero con shift().
+  if (colores.length === 0) {
+    avisar2();
+  } else {
+    const colorEliminado = colores.shift();
+
+    mostrarColores();
+
+    console.log("Ha salido el color:" , colorEliminado);
+  }
 }
 
-mostrarColores();   // pinta los tres colores de partida nada más cargar
+mostrarColores();
 
 
 // ============================================================
