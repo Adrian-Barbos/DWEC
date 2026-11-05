@@ -1,18 +1,3 @@
-/*
-  Tarea 6 · DWEC · Adrián Barbos
-  Objetos y arrays.
-
-  Cómo usar esta plantilla:
-  · Hay una función por botón. Escribe tu código donde pone TODO y, cuando termines, borra el TODO.
-  · Ya tienes hechas, como modelo, comoTexto(), pintarProductos() y el ejercicio 2 casi entero:
-    léelas antes de empezar, porque el resto se hace igual.
-  · Los resultados se pintan en la página como en el tema 5: createElement, textContent, classList y append.
-    Antes de volver a pintar una lista, vacíala con textContent = "".
-  · Las funciones se escriben con function, también las que pasas a forEach, sort, map, filter o reduce.
-    Las funciones flecha las veremos en el tema 7: en esta tarea, no las uses.
-  · Cada función deja también su rastro en la consola con console.log().
-  · let y const, nunca var. Compara siempre con ===. Comillas rectas.
-*/
 
 console.log("app.js cargado");
 
@@ -87,11 +72,15 @@ function cumplirAnios() {
   //Suma 1 a la edad del estudiante y vuelve a pintar la ficha (llama a verFicha()).
   estudiante.edad++;
   verFicha();
+
+  console.log("Se ha ejecutado la función cumplir años.");
 }
 
 function quitarCurso() {
   delete estudiante.curso;
   verFicha();
+
+  console.log("Se ha ejecutado la función quitar curso");
 }
 
 
@@ -135,7 +124,7 @@ function anadirColor() {
   casilla.value = "";
   document.querySelector("#aviso2").classList.add("d-none");
   mostrarColores();
-  console.log("Ejercicio 2: push →", comoTexto(colores));
+  console.log("Se ha ejecutrado la función añadir color");
 }
 
 function quitarUltimo() {
@@ -146,7 +135,7 @@ function quitarUltimo() {
 
     mostrarColores();
 
-    console.log("Ha salido el color:" , colorEliminado);
+    console.log("Se ha quitado el color:" , colorEliminado);
   }
 }
 
@@ -158,7 +147,7 @@ function quitarPrimero() {
 
     mostrarColores();
 
-    console.log("Ha salido el color:" , colorEliminado);
+    console.log("Se ha quitado el color:" , colorEliminado);
   }
 }
 
@@ -220,6 +209,8 @@ function ordenarPorPrecio() {
   pintarProductos(productos);
 
   document.querySelector("#mensaje3").textContent = "Los productos han sido ordenados de más barato a más caro.";
+
+  console.log("Los productos han sido ordenados por precio de menor a mayor.");
 }
 
 function filtrarCaros() {
@@ -230,6 +221,8 @@ function filtrarCaros() {
   pintarProductos(productosmasde50);
 
   document.querySelector("#mensaje3").textContent = `Se han seleccionado ${productosmasde50.length} productos.`;
+
+  console.log("Se ha filtrado correctamente los productos de más de 50 euros.");
   
 }
 
@@ -259,6 +252,8 @@ function buscarProducto() {
     mensaje3.textContent = `Producto encontrado: "${encontrado.nombre}".`;
     pintarProductos([encontrado]);
   }
+
+  console.log("Busqueda realizada correctamente.");
 }
 
 mostrarProductos();   // la tabla completa nada más cargar
@@ -336,15 +331,18 @@ function anadirNota() {
     return;
   }
 
-  
   error4.classList.add("d-none");
   notaintroducia.value = "";
   mostrarNotas();
+
+  console.log("Se ha añadido la nota correctamente.");
 }
 
 function borrarNotas() {
   alumno.notas = [];
   mostrarNotas();
+
+  console.log("Se han borrado las notas correctamente.");
 }
 
 mostrarNotas();
@@ -365,6 +363,8 @@ function verDobles() {
 
   const salida = document.querySelector("#salida5");
   salida.textContent = "Dobles: " + dobles + " | Originales: " + numeros;
+
+  console.log("Se ha ejecutado la función verDobles correctamente.");
 }
 
 function verPares() {
@@ -376,6 +376,8 @@ function verPares() {
 
   const salida = document.querySelector("#salida5");
   salida.textContent = "Pares: " + pares + " | Originales: " + numeros;
+
+  console.log("Se ha ejecutado la función verPares correctamente.");
 }
 
 function verSuma() {
@@ -386,6 +388,8 @@ function verSuma() {
 
   const salida = document.querySelector("#salida5");
   salida.textContent = "Suma total: " + suma;
+
+  console.log("Se ha ejecutado la función verSuma correctamente.");
 
 }
 
@@ -409,6 +413,7 @@ function verCadena() {
   const salida = document.querySelector("#salida5");
   salida.textContent = "Pares: " + pares + " | Dobles: " + dobles + " | Suma: " + sumaDobles;
 
+  console.log("Se ha ejecutado la función verCadena correctamente.");
 
 }
 
@@ -437,6 +442,8 @@ function verSlice() {
   const salida = document.querySelector("#salida6");
 
   salida.textContent = "Devuelve (slice): " + resultadoSlice + " | Siguen en el array: " + ciudades.length;
+
+  console.log("Se ha ejecutado la función verSlice correctamente.");
 }
 
 function hacerSplice() {
@@ -451,6 +458,8 @@ function hacerSplice() {
   //Si no, ciudades.splice(2, 2): escribe en #salida6 qué devuelve y cuántas quedan, y vuelve a pintar.
   const borradas = ciudades.splice(2, 2);
   salida.textContent = "Devuelve (splice): " + borradas + " | Quedan en el array: " + ciudades.length;
+
+  console.log("Se ha ejecutado la función hacerSplice correctamente.");
 }
 
 function restaurarCiudades() {
@@ -460,6 +469,8 @@ function restaurarCiudades() {
   
   const salida = document.querySelector("#salida6");
   salida.textContent = "Ciudades restauradas.";
+
+  console.log("Se ha ejecutado la función restaurarCiudades correctamente.");
 }
 
 function buscarCiudad() {
@@ -478,6 +489,8 @@ function buscarCiudad() {
 
   salida.textContent = "includes(): " + estaIncluida + " | indexOf(): " + posicionIndice;
 
+  console.log("Se ha ejecutado la función buscarCiudad correctamente.");
+  
 }
 
 mostrarCiudades();
