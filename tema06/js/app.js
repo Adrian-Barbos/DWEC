@@ -269,29 +269,82 @@ mostrarProductos();   // la tabla completa nada más cargar
 // ============================================================
 
 const alumno = {
-  nombre: "[Tu nombre]",
-  notas: []
-  // TODO: método anadirNota(nota): si la nota no es un número (Number.isNaN) o no está entre 0 y 10, devuelve false;
-  //       si es válida, la añade a this.notas con push y devuelve true.
-  // TODO: método media(): si no hay notas devuelve 0; si hay, la suma (con reduce) dividida entre el número de notas.
-  //       Recuerda la coma entre una propiedad y la siguiente.
+  nombre: "Adrian",
+  notas: [],
+
+  anadirNota(nota) {
+    if (Number.isNaN(nota) || nota < 0 || nota > 10) {
+      return false;
+    }
+    this.notas.push(nota);
+    return true;
+  },
+
+  media() {
+    if (this.notas.length === 0) {
+      return 0;
+    } else {
+      const suma = this.notas.reduce (function (total, nota) {
+        return total + nota;
+      }, 0);
+      return suma / this.notas.length;
+    }
+  }
 };
 
 function mostrarNotas() {
-  // TODO: vacía #notas y pon un badge (<span class="badge">) por nota: verde (text-bg-success) si es de 5 o más,
-  //       rojo (text-bg-danger) si no.
-  // TODO: en #media, «Media de N notas: X» con dos decimales (toFixed(2)), o «Todavía no hay notas.».
+
+  const contenedorNotas = document.querySelector("#notas");
+  const contenedorMedia = document.querySelector("#media");
+  contenedorNotas.textContent = "";
+
+  alumno.notas.forEach (function (nota) {
+    const badge = document.createElement("span");
+
+    badge.className = "badge me-1 " + (nota >= 5 ? "text-bg-success" : "text-bg-danger");
+    badge.textContent = nota;
+    contenedorNotas.append(badge);
+
+  });
+
+  // Mostramos la media o el mensaje de que no hay notas
+  if (alumno.notas.length === 0) {
+    contenedorMedia.textContent = "Todavía no hay notas.";
+  } else {
+    const resultadoMedia = alumno.media();
+    contenedorMedia.textContent = `Media de ${alumno.notas.length} notas: ${resultadoMedia.toFixed(2)}`;
+  }
 }
 
 function anadirNota() {
-  // TODO: si #nota está vacía, muestra un error en #error4 (quítale "d-none").
-  //       Ojo: Number("") vale 0, así que esta comprobación va antes de convertir.
-  // TODO: convierte el valor con Number() y llama a alumno.anadirNota(). Si devuelve false, muestra el error.
-  // TODO: si ha ido bien, oculta el error, vacía la casilla y llama a mostrarNotas().
+  const notaintroducia = document.querySelector("#nota");
+  const error4 = document.querySelector("#error4");
+
+  
+  
+  if (notaintroducia.value.trim() === "") {
+    error4.classList.remove("d-none");
+    return; 
+  }
+
+  
+  const valorNota = Number(notaintroducia.value);
+  const insertada = alumno.anadirNota(valorNota);
+
+  if (!insertada) {
+    error4.classList.remove("d-none");
+    return;
+  }
+
+  
+  error4.classList.add("d-none");
+  notaintroducia.value = "";
+  mostrarNotas();
 }
 
 function borrarNotas() {
-  // TODO: deja alumno.notas vacío y vuelve a pintar.
+  alumno.notas = [];
+  mostrarNotas();
 }
 
 mostrarNotas();
@@ -304,21 +357,58 @@ mostrarNotas();
 const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function verDobles() {
-  // TODO: con map(), un array nuevo con el doble de cada número.
-  // TODO: escribe en #salida5 el resultado y, debajo, numeros (para que se vea que no ha cambiado).
+
+  const dobles = numeros.map (function (numero) {
+  
+  return numero * 2;
+  });
+
+  const salida = document.querySelector("#salida5");
+  salida.textContent = "Dobles: " + dobles + " | Originales: " + numeros;
 }
 
 function verPares() {
-  // TODO: con filter(), los números pares (n % 2 === 0). Escríbelos en #salida5 como en verDobles().
+
+  const pares = numeros.filter (function (numero){
+
+    return numero % 2 === 0;
+  });
+
+  const salida = document.querySelector("#salida5");
+  salida.textContent = "Pares: " + pares + " | Originales: " + numeros;
 }
 
 function verSuma() {
-  // TODO: con reduce(), la suma de todos los números (empieza en 0). Escríbela en #salida5.
+
+  const suma = numeros.reduce (function (total, numero){
+    return total + numero;
+  }, 0);
+
+  const salida = document.querySelector("#salida5");
+  salida.textContent = "Suma total: " + suma;
+
 }
 
 function verCadena() {
-  // TODO: los tres seguidos: los pares, después sus dobles y al final la suma de esos dobles.
-  //       Escribe en #salida5 una línea por paso.
+
+  // 1. Pares 
+  const pares = numeros.filter(function (numero) {
+    return numero % 2 === 0;
+  });
+
+  // 2. Dobles 
+  const dobles = pares.map(function (numero) {
+    return numero * 2;
+  });
+
+  // 3. Suma 
+  const sumaDobles = dobles.reduce(function (total, numero) {
+    return total + numero;
+  }, 0);
+
+  const salida = document.querySelector("#salida5");
+  salida.textContent = "Pares: " + pares + " | Dobles: " + dobles + " | Suma: " + sumaDobles;
+
 }
 
 
