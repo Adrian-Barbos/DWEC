@@ -2,11 +2,6 @@
 console.log("app.js cargado");
 
 
-// ============================================================
-// Ayuda: un array como texto, por ejemplo [1, 2, 3]
-// (ya está hecha: úsala cuando quieras enseñar un array)
-// ============================================================
-
 function comoTexto(lista) {
   return "[" + lista.join(", ") + "]";
 }
@@ -490,7 +485,7 @@ function buscarCiudad() {
   salida.textContent = "includes(): " + estaIncluida + " | indexOf(): " + posicionIndice;
 
   console.log("Se ha ejecutado la función buscarCiudad correctamente.");
-  
+
 }
 
 mostrarCiudades();
