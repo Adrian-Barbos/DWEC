@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Cambia [Tu nombre] por tu nombre -->
+  <title>Funciones, flechas y clases · [Tu nombre]</title>
+
+  <!-- CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Iconos de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Tu JavaScript. Con defer, espera a que se lea todo el HTML antes de ejecutarse: no lo quites -->
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <!--
+    PLANTILLA DE LA TAREA 7
+    · El HTML ya está hecho: una card por ejercicio (el 6 tiene dos). Tu trabajo está en js/app.js.
+    · No cambies los id que usa el JavaScript (#base, #salida1, #salida2, #numeros3, #cuenta1, #listaAlumnos...)
+      ni el onclick de los botones. Si quieres mejorar el aspecto con Bootstrap, adelante, pero manteniéndolos.
+    · Todo lo que va entre [corchetes] es un hueco: sustitúyelo por lo tuyo.
+  -->
+
+  <!-- NAVBAR con tu nombre -->
+  <nav class="navbar bg-primary" data-bs-theme="dark">
+    <div class="container">
+      <span class="navbar-brand"><i class="bi bi-person-circle"></i> [Tu nombre y apellidos]</span>
+      <span class="navbar-text">Tarea 7 · DWEC</span>
+    </div>
+  </nav>
+
+  <!-- CABECERA -->
+  <header class="bg-body-tertiary border-bottom py-4 mb-4">
+    <div class="container">
+      <h1 class="h2 mb-1">Funciones, flechas y clases</h1>
+      <p class="lead mb-0 text-body-secondary">Funciones que devuelven valores, callbacks con flecha, closures, clases y los objetos String, Math y Date.</p>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <div class="row g-4">
+
+      <!-- EJERCICIO 1 -->
+      <div class="col-12 col-lg-6">
+        <section class="card h-100 shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge text-bg-primary">1</span> Precio final
+          </div>
+          <div class="card-body">
+            <div class="row g-2 mb-2">
+              <div class="col-12 col-sm-4">
+                <label for="base" class="form-label small">Precio sin IVA (€)</label>
+                <input type="number" id="base" class="form-control" min="0" step="0.01" placeholder="100">
+              </div>
+              <div class="col-6 col-sm-4">
+                <label for="iva" class="form-label small">IVA</label>
+                <select id="iva" class="form-select">
+                  <option value="21">21 % general</option>
+                  <option value="10">10 % reducido</option>
+                  <option value="4">4 % superreducido</option>
+                </select>
+              </div>
+              <div class="col-6 col-sm-4">
+                <label for="descuento" class="form-label small">Descuento (%)</label>
+                <input type="number" id="descuento" class="form-control" min="0" max="100" placeholder="opcional">
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary mb-2" onclick="mostrarPrecio()"><i class="bi bi-calculator"></i> Calcular</button>
+            <p id="error1" class="text-danger small mb-2 d-none"></p>
+            <ul id="salida1" class="list-group"></ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- EJERCICIO 2 -->
+      <div class="col-12 col-lg-6">
+        <section class="card h-100 shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge text-bg-primary">2</span> Películas: de function a flecha
+          </div>
+          <div class="card-body">
+            <div class="d-flex flex-wrap gap-2 mb-2">
+              <button type="button" class="btn btn-success btn-sm" onclick="verTitulos()">Títulos (map)</button>
+              <button type="button" class="btn btn-warning btn-sm" onclick="verLargas()">Más de 2 horas (filter)</button>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="ordenarPorAnio()">Por año (sort)</button>
+              <button type="button" class="btn btn-info btn-sm" onclick="verDuracionTotal()">Duración total (reduce)</button>
+              <button type="button" class="btn btn-dark btn-sm" onclick="buscarAntigua()">Anterior a 1990 (find)</button>
+            </div>
+            <p id="mensaje2" class="small text-body-secondary mb-2"></p>
+            <ul id="salida2" class="list-group"></ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- EJERCICIO 3 -->
+      <div class="col-12 col-lg-6">
+        <section class="card h-100 shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge text-bg-primary">3</span> Tu propio callback
+          </div>
+          <div class="card-body">
+            <p class="small mb-2">Con <code id="numeros3"></code> y la función <code>transformar(lista, operacion)</code>:</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <button type="button" class="btn btn-success btn-sm" onclick="verDobles()">Doble</button>
+              <button type="button" class="btn btn-warning btn-sm" onclick="verCuadrados()">Cuadrado</button>
+              <button type="button" class="btn btn-info btn-sm" onclick="verAbsolutos()">Valor absoluto</button>
+            </div>
+            <div id="salida3" class="bg-body-tertiary border rounded p-2 small font-monospace">Pulsa un botón para ver el resultado.</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- EJERCICIO 4 -->
+      <div class="col-12 col-lg-6">
+        <section class="card h-100 shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge text-bg-primary">4</span> Dos contadores con closure
+          </div>
+          <div class="card-body">
+            <div class="row g-3 text-center">
+              <div class="col-6">
+                <div class="border rounded p-3">
+                  <p class="small text-body-secondary mb-1">De 1 en 1</p>
+                  <p id="cuenta1" class="display-5 fw-semibold mb-2">0</p>
+                  <button type="button" class="btn btn-primary" onclick="sumarUno()"><i class="bi bi-plus-lg"></i> 1</button>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="border rounded p-3">
+                  <p class="small text-body-secondary mb-1">De 5 en 5</p>
+                  <p id="cuenta5" class="display-5 fw-semibold mb-2">0</p>
+                  <button type="button" class="btn btn-success" onclick="sumarCinco()"><i class="bi bi-plus-lg"></i> 5</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- EJERCICIO 5 -->
+      <div class="col-12">
+        <section class="card shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge text-bg-primary">5</span> Clases: alumnos y alumnos en prácticas
+            <span class="ms-auto small">Alumnos: <span id="totalAlumnos" class="badge text-bg-secondary">0</span></span>
+          </div>
+          <div class="card-body">
+            <div class="row g-2 align-items-end mb-2">
+              <div class="col-12 col-md-3">
+                <label for="nombre5" class="form-label small">Nombre</label>
+                <input type="text" id="nombre5" class="form-control" placeholder="Por ejemplo, Sara Gil">
+              </div>
+              <div class="col-6 col-md-2">
+                <label for="curso5" class="form-label small">Curso</label>
+                <select id="curso5" class="form-select">
+                  <option>1.º DAW</option>
+                  <option selected>2.º DAW</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-3">
+                <label for="empresa5" class="form-label small">Empresa de prácticas</label>
+                <input type="text" id="empresa5" class="form-control" placeholder="Vacía si no está en FCT">
+              </div>
+              <div class="col-12 col-md-2">
+                <label for="notas5" class="form-label small">Notas</label>
+                <input type="text" id="notas5" class="form-control" placeholder="7, 8.5, 6">
+              </div>
+              <div class="col-12 col-md-2 d-grid">
+                <button type="button" class="btn btn-success" onclick="crearAlumno()"><i class="bi bi-person-plus"></i> Crear</button>
+              </div>
+            </div>
+            <p id="error5" class="text-danger small mb-2 d-none"></p>
+            <div id="listaAlumnos" class="row g-2"></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- EJERCICIO 6 -->
+      <div class="col-12 col-lg-6">
+        <section class="card h-100 shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge text-bg-primary">6</span> Fechas
+          </div>
+          <div class="card-body">
+            <label for="fecha6" class="form-label small">¿Cuántos días faltan para…?</label>
+            <div class="input-group mb-2">
+              <input type="date" id="fecha6" class="form-control">
+              <button type="button" class="btn btn-primary" onclick="mostrarDias()"><i class="bi bi-calendar-event"></i> Calcular</button>
+            </div>
+            <p id="salida6a" class="mb-0"></p>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <section class="card h-100 shadow-sm">
+          <div class="card-header d-flex align-items-center gap-2">
+            <span class="badge text-bg-primary">6</span> Textos
+          </div>
+          <div class="card-body">
+            <label for="nombre6" class="form-label small">Nombre completo</label>
+            <div class="input-group mb-2">
+              <input type="text" id="nombre6" class="form-control" placeholder="Por ejemplo, Lucía Martín Ortega">
+              <button type="button" class="btn btn-primary" onclick="mostrarIniciales()"><i class="bi bi-fonts"></i> Iniciales</button>
+            </div>
+            <p id="salida6b" class="mb-0"></p>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-body-tertiary border-top py-3">
+    <div class="container small text-body-secondary">
+      [Tu nombre y apellidos] · DWEC 26/27 · Tarea 7 · Las capturas, la reflexión y las fuentes están en el README.
+    </div>
+  </footer>
+
+  <!-- JS de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
