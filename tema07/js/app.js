@@ -1,16 +1,5 @@
 /*
-  Tarea 7 · DWEC · [Tu nombre y apellidos]
-  Funciones, flechas y clases.
-
-  Cómo usar esta plantilla:
-  · Hay una función por botón. Escribe tu código donde pone TODO y, cuando termines, borra el TODO.
-  · La regla de este tema:
-      - declaración, function nombre() { ... }, para las funciones con nombre, como las de los botones;
-      - FLECHA para todos los callbacks: forEach, map, filter, sort, reduce, find, some...;
-      - nunca una flecha como método: en las clases, la forma corta media() { ... }.
-  · Los resultados se pintan en la página como en los temas 5 y 6: createElement, textContent, classList y append.
-  · Cada función deja también su rastro en la consola con console.log().
-  · let y const, nunca var. Compara siempre con ===. Comillas rectas.
+  Tarea 7 · DWEC · Adrián Barbos
 */
 
 console.log("app.js cargado");
@@ -37,11 +26,6 @@ function pintarLista(selector, textos) {
 // ============================================================
 // Ejercicio 1 · Precio final
 // ============================================================
-
-// TODO: calcularPrecio(base, iva, descuento) devuelve el precio final con return. No lee ni pinta nada.
-//       iva vale 21 por defecto y descuento, 0 por defecto (parámetros por defecto).
-//       Primero se resta el descuento (un tanto por ciento de la base) y después se suma el IVA.
-//       Comprueba en la consola: calcularPrecio(100) tiene que dar 121.
 
 function calcularPrecio(base, iva = 21, descuento = 0) {
     const precioConDescuento = base - (base * descuento) / 100;
@@ -113,50 +97,51 @@ function comoTexto(pelicula) {
   return `${pelicula.titulo} (${pelicula.anio}) · ${pelicula.duracion} min`;
 }
 
-// Las cuatro funciones siguientes ya funcionan, pero sus callbacks están escritos con function, como en el tema 6.
-// TODO: pasa a flecha los cuatro callbacks (map, filter, sort y reduce). Si el cuerpo es solo una expresión,
-//       sin llaves ni return. Comprueba después que cada botón sigue dando lo mismo.
 
 function verTitulos() {
-  const titulos = peliculas.map(function (pelicula) {
-    return pelicula.titulo;
-  });
+  const titulos = peliculas.map((pelicula)=> pelicula.titulo);
+
   pintarLista("#salida2", titulos);
   document.querySelector("#mensaje2").textContent = `${titulos.length} títulos.`;
   console.log("Ejercicio 2: map →", titulos);
 }
 
 function verLargas() {
-  const largas = peliculas.filter(function (pelicula) {
-    return pelicula.duracion > 120;
-  });
+  const largas = peliculas.filter((pelicula) => pelicula.duracion > 120);
+
   pintarLista("#salida2", largas.map(comoTexto));   // comoTexto ya es una función: se pasa sin paréntesis
   document.querySelector("#mensaje2").textContent = `${largas.length} películas duran más de 2 horas.`;
   console.log("Ejercicio 2: filter →", largas);
 }
 
 function ordenarPorAnio() {
-  const ordenadas = [...peliculas].sort(function (a, b) {   // una copia: sort cambia el original
-    return a.anio - b.anio;
-  });
+  const ordenadas = [...peliculas].sort((a, b) => a.anio - b.anio);
+
   pintarLista("#salida2", ordenadas.map(comoTexto));
   document.querySelector("#mensaje2").textContent = "De la más antigua a la más reciente.";
   console.log("Ejercicio 2: sort →", ordenadas);
 }
 
 function verDuracionTotal() {
-  const minutos = peliculas.reduce(function (total, pelicula) {
-    return total + pelicula.duracion;
-  }, 0);
+  const minutos = peliculas.reduce((total, pelicula) => total + pelicula.duracion,0);
+
   pintarLista("#salida2", [`${minutos} minutos de películas`]);
   document.querySelector("#mensaje2").textContent = "La suma de las seis duraciones.";
   console.log("Ejercicio 2: reduce →", minutos);
 }
 
 function buscarAntigua() {
-  // TODO: el callback nuevo, ya con flecha: con find(), la primera película anterior a 1990.
-  // TODO: find devuelve undefined si no hay ninguna: dilo en #mensaje2 y vacía la lista.
-  //       Si la encuentra, píntala con pintarLista("#salida2", [comoTexto(antigua)]).
+  const antigua = peliculas.find((pelicula) => pelicula.anio < 1990);
+
+  if (antigua === undefined) {
+    document.querySelector("#mensaje2").textContent = "No hay películas anteriores a 1990.";
+    pintarLista("#salida2", []);
+  } else {
+    pintarLista("#salida2", [comoTexto(antigua)]);
+    document.querySelector("#mensaje2").textContent = "Primera película antes de 1990.";
+  }
+
+  console.log("Ejercicio 2: find ->", antigua);
 }
 
 
